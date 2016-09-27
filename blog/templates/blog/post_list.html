@@ -9,17 +9,14 @@
  <div>
             <h1><a href="">Django First Blog</a></h1>
         </div>
+{% for post in posts %}
+    <div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+    </div>
 
-        <div>
-            <p>published: 26.09.2016, 15:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Vigils observare! To some, a visitor is a music for following.</p>
-        </div>
+{% endfor %}
 
-        <div>
-            <p>published: 26.09.2066, 15:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Sonic shower, turbulence, and moon.</p>
-        </div>
 </body>
 </html>
