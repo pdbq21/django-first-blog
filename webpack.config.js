@@ -41,7 +41,7 @@ path: __dirname + '/testWebpack/publish',
     },
 
     resolve: {
-        extensions: ['', '.js', '.jsx', '.scss'],
+        extensions: ['', '.js', '.jsx'],
         modulesDirectories: [
             'node_modules'
         ]
@@ -59,13 +59,29 @@ path: __dirname + '/testWebpack/publish',
                     plugins: ['transform-runtime'],
                     presets: ['es2015', 'stage-0', 'react']
                 }
-            }
+            },
+            {test : /\.css$/, loader: 'style!css!'}
         ]
     },
     plugins: [
-        //new webpack.optimize.UglifyJsPlugin({minimize: true}),
-
+       new webpack.optimize.UglifyJsPlugin({
+           warnings: false,
+        booleans: false,
+        unused: false,
+           minimize: true}),
+new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify('production')
+    }
+  }),
         new webpack.optimize.CommonsChunkPlugin({name: 'common'}),
+
+        new webpack.ProvidePlugin({
+            pluck: 'react/dist/react.js'
+        }),
+
+
+
     ]
 
 };

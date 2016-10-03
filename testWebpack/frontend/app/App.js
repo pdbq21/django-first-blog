@@ -8,7 +8,8 @@ import ListItem from './page1'
 class App extends Component {
 
    state = {
-       articles: ['qwer' , 'asd', 'zxc', 'wer', 'sdf', 'xcv']
+       articles: ['qwer' , 'asd', 'zxc', 'wer', 'sdf', 'xcv'],
+       links: ['../index2.html']
    };
 
 
@@ -21,7 +22,7 @@ class App extends Component {
            <ul className="content-list">
                {this.state.articles.map((article, index) => (
                    <li className="content-list__item" key={index}>
-                       <ListItem article={article} />
+                       <ListItem article={article} index={index}/>
                    </li>
                ))}
            </ul>
