@@ -64,11 +64,12 @@ path: __dirname + '/testWebpack/publish',
         ]
     },
     plugins: [
-       new webpack.optimize.UglifyJsPlugin({
+       /*new webpack.optimize.UglifyJsPlugin({
            warnings: false,
         booleans: false,
         unused: false,
-           minimize: true}),
+           minimize: true}),*/
+
 new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': JSON.stringify('production')

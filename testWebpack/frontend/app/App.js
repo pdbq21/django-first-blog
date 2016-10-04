@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react'
 import ListItem from './page1'
-
+import styles from '../style/css1.css'
 
 class App extends Component {
 
