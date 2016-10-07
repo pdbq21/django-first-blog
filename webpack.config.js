@@ -1,43 +1,22 @@
 /**
  * Created by ruslan on 29.09.16.
  */
-/*
- module.exports = {
 
- entry: "./testWebpack/home",
- output: {
- filename: "build.js"
- },
-
- watch: true,
-
- module: {
- loaders: [
- {
- test: /\.js$/,
- loader: 'babel'
- }
- ]
- }
- };*/
-
-
-//import 'webpack'
-
+var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
     entry: {
 
-        home: './testWebpack/frontend/home',
-        about: './testWebpack/frontend/about',
+        home: './selectMenu/src/index.js'
 
     },
     //'./testWebpack/home',
     output: {
-path: __dirname + '/testWebpack/publish',
-        filename: '[name].js',
-        library: '[name]'
+        path: __dirname + '/selectMenu',
+        /*filename: '[name].js',
+        library: '[name]'*/
+        filename: 'build.js'
     },
 
     resolve: {
@@ -54,33 +33,35 @@ path: __dirname + '/testWebpack/publish',
             {
                 test: /\.jsx?$/,
                 loader: ['babel'],
+               /* include: [
+                    path.resolve(__dirname, "src"),
+                ],*/
                 exclude: /node_modules/,
                 query: {
                     plugins: ['transform-runtime'],
                     presets: ['es2015', 'stage-0', 'react']
                 }
             },
-            {test : /\.css$/, loader: 'style!css!'}
+            {test: /\.css$/, loader: 'style!styles!'}
         ]
     },
     plugins: [
-       /*new webpack.optimize.UglifyJsPlugin({
-           warnings: false,
-        booleans: false,
-        unused: false,
-           minimize: true}),*/
+        /*new webpack.optimize.UglifyJsPlugin({
+         warnings: false,
+         booleans: false,
+         unused: false,
+         minimize: true}),*/
 
-new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify('production')
-    }
-  }),
-        new webpack.optimize.CommonsChunkPlugin({name: 'common'}),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        //new webpack.optimize.CommonsChunkPlugin({name: 'common'}),
 
         new webpack.ProvidePlugin({
             pluck: 'react/dist/react.js'
         }),
-
 
 
     ]
