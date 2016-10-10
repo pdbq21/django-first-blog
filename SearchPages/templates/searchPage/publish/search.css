@@ -1,12 +1,40 @@
-#root form{
-    margin-left: 5em;
+#root{
+    margin-top: 2em;
 }
 
-form input{
-    height: 2em;
-    width: 90%;
+#root .row .form_block{
+    display: inline-flex;
 }
 
-form .search{
-    padding: 0.5em 1em 0.5em 1em;
+#search-text{
+    width: 80%;
+}
+.category_name{
+background-color: #EEEEEE;
+        margin-bottom: 0px;
+}
+.category_name p{
+background-color: #a5a5a5;
+}
+.category_name button{
+    float: right;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+.category_left ul{
+        list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.category_left{
+        padding-left: 0px;
+}
+
+.category_left ul li{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.category_left ul li button{
+    float: right;
 }

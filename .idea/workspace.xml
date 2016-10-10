@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290476ec-754a-4572-ba07-09c2447eba9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/npm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="django.iws" />
@@ -45,93 +62,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selectMenu/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchPages/publish/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/post_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <marker date="1476095058129" expanded="true" signature="97:134" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-              <folding>
-                <element signature="e#80#88#0" expanded="false" />
-                <marker date="1476104277319" expanded="true" signature="50:58" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="118:126" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="201:858" ph="{...}" />
-                <marker date="1476104277319" expanded="true" signature="246:254" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="459:550" ph="{&quot;id&quot;: moduleId...}" />
-                <marker date="1476104277319" expanded="true" signature="512:520" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="553:561" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="692:700" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="813:821" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="847:855" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="861:869" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="966:974" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1056:1064" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1182:1190" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1235:1309" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1310:1318" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1320:777411" ph="[...]" />
-                <marker date="1476104277319" expanded="true" signature="1322:1329" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1330:1335" ph="/*...*/" />
-                <marker date="1476104277319" expanded="true" signature="1383:1408" ph="{...}" />
-                <marker date="1476104277319" expanded="true" signature="777390:777400" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-174">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="144">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -140,36 +72,102 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="625" column="4" selection-start-line="625" selection-start-column="4" selection-end-line="625" selection-end-column="4" />
+            <state relative-caret-position="232">
+              <caret line="500" column="75" selection-start-line="500" selection-start-column="75" selection-end-line="500" selection-end-column="75" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#53#78#0" expanded="true" />
-                <element signature="e#210#653#0" expanded="false" />
-                <element signature="e#667#1339#0" expanded="false" />
-                <element signature="e#1353#1784#0" expanded="false" />
-                <element signature="e#1798#2245#0" expanded="false" />
-                <element signature="e#2259#3667#0" expanded="false" />
-                <element signature="e#3681#4866#0" expanded="false" />
+                <element signature="e#199#13110#0" expanded="false" />
+                <element signature="e#213#656#0" expanded="false" />
+                <element signature="e#670#1342#0" expanded="false" />
+                <element signature="e#1356#1787#0" expanded="false" />
+                <element signature="e#1801#2248#0" expanded="false" />
+                <element signature="e#2262#3670#0" expanded="false" />
+                <element signature="e#3684#4869#0" expanded="false" />
+                <element signature="e#4883#5771#0" expanded="false" />
+                <element signature="e#13728#25529#0" expanded="false" />
                 <element signature="n#SearchArticles#0" expanded="false" />
                 <element signature="n#DivNameCategory#0" expanded="false" />
                 <element signature="n#ElementListFound#0" expanded="false" />
                 <element signature="n#ListItemsFound#0" expanded="false" />
-                <element signature="n#SearchResultCategory#0" expanded="false" />
-                <element signature="n#SearchResultView#0" expanded="false" />
-                <element signature="e#31452#31971#0" expanded="false" />
-                <element signature="e#32054#32571#0" expanded="false" />
-                <element signature="e#32657#32677#0" expanded="false" />
+                <element signature="n#!!block;n#handelClickButtonSearch#0;n#App#0" expanded="false" />
+                <element signature="e#36754#37273#0" expanded="false" />
+                <element signature="e#37356#37873#0" expanded="false" />
+                <element signature="e#37959#37979#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selectMenu/build.js">
+      <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="npm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/npm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -365,11 +363,105 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="publish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SearchPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="searchPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-3.3.7-dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SearchPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="searchPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-3.3.7-dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SearchPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="searchPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,6 +482,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -698,7 +791,7 @@
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17025982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23272526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32815966" sideWeight="0.5090703" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -754,34 +847,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testWebpack/publish/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react/react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testWebpack/frontend/app/page1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testWebpack/publish/index3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testWebpack/frontend/about.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1054,59 +1119,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
           <folding>
-            <element signature="e#80#88#0" expanded="false" />
-            <marker date="1476104277319" expanded="true" signature="50:58" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="118:126" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="201:858" ph="{...}" />
-            <marker date="1476104277319" expanded="true" signature="246:254" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="459:550" ph="{&quot;id&quot;: moduleId...}" />
-            <marker date="1476104277319" expanded="true" signature="512:520" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="553:561" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="692:700" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="813:821" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="847:855" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="861:869" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="966:974" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1056:1064" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1182:1190" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1235:1309" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1310:1318" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1320:777411" ph="[...]" />
-            <marker date="1476104277319" expanded="true" signature="1322:1329" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1330:1335" ph="/*...*/" />
-            <marker date="1476104277319" expanded="true" signature="1383:1408" ph="{...}" />
-            <marker date="1476104277319" expanded="true" signature="777390:777400" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <marker date="1476095058129" expanded="true" signature="97:134" ph="{...}" />
+            <marker date="1476113064638" expanded="true" signature="50:58" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="118:126" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="201:858" ph="{...}" />
+            <marker date="1476113064638" expanded="true" signature="246:254" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="459:550" ph="{&quot;id&quot;: moduleId...}" />
+            <marker date="1476113064638" expanded="true" signature="512:520" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="553:561" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="692:700" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="813:821" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="847:855" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="861:869" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="966:974" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1056:1064" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1182:1190" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1235:1309" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1310:1318" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1320:791676" ph="[...]" />
+            <marker date="1476113064638" expanded="true" signature="1322:1329" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1330:1335" ph="/*...*/" />
+            <marker date="1476113064638" expanded="true" signature="1383:1408" ph="{...}" />
+            <marker date="1476113064638" expanded="true" signature="791656:791665" ph="{...}" />
+            <marker date="1476113064638" expanded="true" signature="791658:791663" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -1115,14 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selectMenu/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1137,28 +1168,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selectMenu/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="625" column="4" selection-start-line="625" selection-start-column="4" selection-end-line="625" selection-end-column="4" />
+        <state relative-caret-position="232">
+          <caret line="500" column="75" selection-start-line="500" selection-start-column="75" selection-end-line="500" selection-end-column="75" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#53#78#0" expanded="true" />
-            <element signature="e#210#653#0" expanded="false" />
-            <element signature="e#667#1339#0" expanded="false" />
-            <element signature="e#1353#1784#0" expanded="false" />
-            <element signature="e#1798#2245#0" expanded="false" />
-            <element signature="e#2259#3667#0" expanded="false" />
-            <element signature="e#3681#4866#0" expanded="false" />
+            <element signature="e#199#13110#0" expanded="false" />
+            <element signature="e#213#656#0" expanded="false" />
+            <element signature="e#670#1342#0" expanded="false" />
+            <element signature="e#1356#1787#0" expanded="false" />
+            <element signature="e#1801#2248#0" expanded="false" />
+            <element signature="e#2262#3670#0" expanded="false" />
+            <element signature="e#3684#4869#0" expanded="false" />
+            <element signature="e#4883#5771#0" expanded="false" />
+            <element signature="e#13728#25529#0" expanded="false" />
             <element signature="n#SearchArticles#0" expanded="false" />
             <element signature="n#DivNameCategory#0" expanded="false" />
             <element signature="n#ElementListFound#0" expanded="false" />
             <element signature="n#ListItemsFound#0" expanded="false" />
-            <element signature="n#SearchResultCategory#0" expanded="false" />
-            <element signature="n#SearchResultView#0" expanded="false" />
-            <element signature="e#31452#31971#0" expanded="false" />
-            <element signature="e#32054#32571#0" expanded="false" />
-            <element signature="e#32657#32677#0" expanded="false" />
+            <element signature="n#!!block;n#handelClickButtonSearch#0;n#App#0" expanded="false" />
+            <element signature="e#36754#37273#0" expanded="false" />
+            <element signature="e#37356#37873#0" expanded="false" />
+            <element signature="e#37959#37979#0" expanded="false" />
           </folding>
         </state>
       </provider>
