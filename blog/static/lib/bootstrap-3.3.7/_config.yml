@@ -26,7 +26,7 @@ download:
   dist:           https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
   sass:           https://github.com/twbs/bootstrap-sass/archive/v3.3.7.tar.gz
 
-blog:             http://blog.getbootstrap.com
+blog:             http://searchPage.getbootstrap.com
 expo:             http://expo.getbootstrap.com
 themes:           http://themes.getbootstrap.com
 
