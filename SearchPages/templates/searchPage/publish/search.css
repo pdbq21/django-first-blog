@@ -1,0 +1,12 @@
+#root form{
+    margin-left: 5em;
+}
+
+form input{
+    height: 2em;
+    width: 90%;
+}
+
+form .search{
+    padding: 0.5em 1em 0.5em 1em;
+}

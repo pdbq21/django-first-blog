@@ -8,12 +8,12 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
 
-        home: './selectMenu/src/index.js'
+        home: './SearchPages/templates/searchPage/frontend/app/App.js'
 
     },
     //'./testWebpack/home',
     output: {
-        path: __dirname + '/selectMenu',
+        path: __dirname + '/SearchPages/templates/searchPage/publish',
         /*filename: '[name].js',
         library: '[name]'*/
         filename: 'build.js'
