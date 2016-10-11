@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290476ec-754a-4572-ba07-09c2447eba9b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
     </list>
     <ignored path="django.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +52,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="332" column="0" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+            <state relative-caret-position="276">
+              <caret line="589" column="18" selection-start-line="589" selection-start-column="18" selection-end-line="589" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#53#78#0" expanded="true" />
@@ -68,7 +65,21 @@
                 <element signature="e#2262#3670#0" expanded="false" />
                 <element signature="e#3684#4869#0" expanded="false" />
                 <element signature="e#4883#5771#0" expanded="false" />
-                <element signature="e#13728#25529#0" expanded="false" />
+                <element signature="e#5785#6629#0" expanded="false" />
+                <element signature="e#6643#7994#0" expanded="false" />
+                <element signature="e#8008#8345#0" expanded="false" />
+                <element signature="e#8359#9219#0" expanded="false" />
+                <element signature="e#9233#10104#0" expanded="false" />
+                <element signature="e#10118#10692#0" expanded="false" />
+                <element signature="e#10706#11386#0" expanded="false" />
+                <element signature="e#11400#11845#0" expanded="false" />
+                <element signature="e#11859#12600#0" expanded="false" />
+                <element signature="e#12614#13099#0" expanded="false" />
+                <element signature="e#13127#13803#0" expanded="false" />
+                <element signature="e#13820#14622#0" expanded="false" />
+                <element signature="e#14642#27536#0" expanded="false" />
+                <element signature="e#27555#39356#0" expanded="false" />
+                <element signature="e#46744#53780#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -215,8 +226,8 @@
         <option value="$PROJECT_DIR$/SearchPages/templates/blog/frontend/app/home_page.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" />
-        <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
         <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
+        <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
       </list>
     </option>
   </component>
@@ -822,7 +833,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -1166,8 +1179,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="332" column="0" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+        <state relative-caret-position="276">
+          <caret line="589" column="18" selection-start-line="589" selection-start-column="18" selection-end-line="589" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#53#78#0" expanded="true" />
@@ -1179,7 +1192,21 @@
             <element signature="e#2262#3670#0" expanded="false" />
             <element signature="e#3684#4869#0" expanded="false" />
             <element signature="e#4883#5771#0" expanded="false" />
-            <element signature="e#13728#25529#0" expanded="false" />
+            <element signature="e#5785#6629#0" expanded="false" />
+            <element signature="e#6643#7994#0" expanded="false" />
+            <element signature="e#8008#8345#0" expanded="false" />
+            <element signature="e#8359#9219#0" expanded="false" />
+            <element signature="e#9233#10104#0" expanded="false" />
+            <element signature="e#10118#10692#0" expanded="false" />
+            <element signature="e#10706#11386#0" expanded="false" />
+            <element signature="e#11400#11845#0" expanded="false" />
+            <element signature="e#11859#12600#0" expanded="false" />
+            <element signature="e#12614#13099#0" expanded="false" />
+            <element signature="e#13127#13803#0" expanded="false" />
+            <element signature="e#13820#14622#0" expanded="false" />
+            <element signature="e#14642#27536#0" expanded="false" />
+            <element signature="e#27555#39356#0" expanded="false" />
+            <element signature="e#46744#53780#0" expanded="false" />
           </folding>
         </state>
       </provider>

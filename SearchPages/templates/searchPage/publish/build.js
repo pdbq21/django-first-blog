@@ -160,16 +160,121 @@
 
 	            Description: 'The illegal trade and sale of African bushmeat presents a number of serious biosecurity risks. In addition the trade and sale of these products has a significant impact on the maintenance of populations of protected (CITES) or endangered species.\n\nThis issue page has been created to monitor information on African bushmeat over the issue period to assist with understanding of this trade.'
 	        }],
-	        Group: {
-	            Name: ['Ongoing', 'Emerging', 'Past', 'Potential', 'Africa', 'Chile', 'risks', 'Foot', 'population', 'Panama', 'August']
-	        },
-	        Issue: {
-	            Name: ['Citrus greening', 'Huanglongbing in Central', 'integrated technologies', 'Whirling disease', 'the first time in Canada', 'Issues combined', 'the disease risks', 'the fish kill', 'Mayors Landing Fishing Access', 'Whirling disease']
-	        },
-	        Searches: {
-	            Name: '',
-	            Main_Query: ''
-	        },
+	        Group: [{
+	            Name: 'Ongoing'
+	        }, {
+	            Name: 'Emerging'
+	        }, {
+	            Name: 'Past'
+	        }, {
+	            Name: 'Potential'
+	        }, {
+	            Name: 'Africa'
+	        }, {
+	            Name: 'Chile'
+	        }, {
+	            Name: 'risks'
+	        }, {
+	            Name: 'Foot'
+	        }, {
+	            Name: 'population'
+	        }, {
+	            Name: 'Panama'
+	        }, {
+	            Name: 'August'
+	        }],
+	        Issue: [{
+	            Name: 'Citrus greening'
+	        }, {
+	            Name: 'Huanglongbing in Central'
+	        }, {
+	            Name: 'integrated technologies'
+	        }, {
+	            Name: 'Whirling disease'
+	        }, {
+	            Name: 'the first time in Canada'
+	        }, {
+	            Name: 'Issues combined'
+	        }, {
+	            Name: 'the disease risks'
+	        }, {
+	            Name: 'Foot'
+	        }, {
+	            Name: 'the fish kill'
+	        }, {
+	            Name: 'Mayors Landing Fishing Access'
+	        }, {
+	            Name: 'Whirling disease'
+	        }],
+	        Searches: [{
+	            Name: 'Lumpy Skin Disease - Cyprus 2014 /Greece 2015 /EU 2016 - Ongoing',
+
+	            Main_Query: 'Issue established 3 December 2014 following outbreak of LSD on Cyprus.\nSeparate issue established on 26 August 2015 following outbreak of LSD in Greece.\nIssues combined on 5 May 2016 and expanded to cover further incursions in the EU, starting with spread to Bulgaria and Macedonia (FYROM) in April 2016.'
+	        }, {
+	            Name: 'PKD outbreak US: August 2016 - on-going',
+
+	            Main_Query: 'August 14:\n\nA dead whitefish floats belly up near the Mayors Landing Fishing Access in the Yellowstone River in Livingston, Mont. on Sunday, Aug. 14, 2016. \nMontana Fish, Wildlife and Parks estimates the fish kill to be in the tens of thousands and issued a closure of all water-based recreation on the Yellowstone from the Yellowstone National Park\'s northern boundary to Laurel, according to a press release. FWP lab results reveal the catalyst of the killto be Proliferative Kidney Disease \' one of the most serious diseases to impact whitefish and trout.'
+	        }, {
+	            Name: 'CANADA: Whirling disease. August 2016 - ongoing',
+
+	            Main_Query: 'August 2016:\n\nThe first known Canadian case of whirling disease in fish has been found in Johnson Lake in Banff National Park.\n\nSeptember:\n\nA deadly fish disease discovered for the first time in Canada in late August has now spread to the Bow River, Canadian Food Inspection Agency officials confirmed Monday.'
+	        }, {
+	            Name: 'Panama disease incursion in North Queensland 2015',
+
+	            Main_Query: 'A research project to trial banana plants that could tolerate Panama Disease Tropical Race 4 has been thwarted by another plant disease, Banana Freckle.\n\nPanama Tropical Race 4 (TR4) completely devastated the Northern Territory\'s banana industry in the 1990s and has now been found on a banana farm in far north Queensland.'
+	        }, {
+	            Name: 'EARLY MORTALITY SYNDROME in SHRIMP [2010 and ongoing]',
+
+	            Main_Query: 'ORIGINAL SUMMARY\n\nThis new disease has been known as early mortality syndrome and is now commonly referred to as acute hepatopancreatic degenerative necrotic syndrome (AHDNS). Mass mortailty of shrimp from AHDNA has been reported in China (2009), Vietnam (2010) and Malaysia (2011). In June 2011, provinces of the Mekong Delta suffered unprecedented losses with tiger shrimp in 40,000 hectares of farm area affected. Over 11,000 hectares of shrimp farms in Bac Lieu have been destroyed. In 6,200 hectares of shrimp farms in In Tra Vinh, about 330 million shrimp have died causing a loss of over VND12 billion. In Soc Trang, 20,000 out of 25,000 hectares of shrimp farms have been destroyed, causing VND1.5 trillion (US$75 million) in losses. Initial evidence led investigators to beleive the disease was caused from microsporidiosis of the hepatopancreas. Relavent reference in the scientific literature may be; Kasetsart J. (2009). The Effects of Microsporidian (Thelohania) Infection on the Growth and Histopathological Changes in Pond-reared Pacific White Shrimp (Litopenaeus vannamei). Nat. Sci. 43: 680 - 688. These views maybe changing with the disease now possibly related to liver necrosis. In Mekong Delta of Vietnam, AHDNA has been associated with the use of pesticides.'
+	        }, {
+	            Name: 'Oyster herpes OsHV-1 µvar goes global [2010 - ?]',
+
+	            Main_Query: 'OsHV-1 \xB5var is spreading around the world. The global spread started with an outbreak in France in 2008. Since then, there have been the following outbreaks: UK 2010 New Zealand 2010 Australia 2010 Netherlands 2011 USA 2011 (OsHV-1) Spain 2011 Japan ? The spread of OsHV-1 \xB5var around different parts of the world where pacific oysters are grown was forecast by using some of the information found in the AquaticHealth.net database. The forecasts were made with the consideration that OsHV-1 \xB5var was always present in the oyster population at very low levels. This may not be wholly accurate, and it raises more questions than answers, but it was effective. And supplying spat from hatcheries is like playing Russian roulette. This means any region receiving spat from a hatchery is at risk of an outbreak when the right conditions prevail e.g. Tasmania (ED UPDATE Jan 2016: too late for Tas, prediction is correct and has played out), South Australia (next cab off the rank when temperatures are just right?). Possible solutions: better hatchery biosecurity...'
+	        }, {
+	            Name: 'Huanglongbing in Central and South America',
+
+	            Main_Query: 'Uruguay extreme controls to prevent the onset of disease in the citrus Huanglongbing. Nurseries, plantations are inspected and entry of all plant material is prevented from Brazil and Argentina. While the increase border controls to prevent the entry of any plant material, the Ministry of Livestock, Agriculture and Fisheries promotes agreements with citrus enterprises looking to increase inspections of nurseries and crops, to cases of Huanglongbing (HLB) in citrus Argentina. The disease came to Concordia and is generating conflict between Argentine growers and health authorities. It is caused by a bacterium (Candidatus liberobacter asiaticus) and the main vector of transmission are plants without certification of origin (it spreads by buds, grafts, tools, etc.).'
+	        }, {
+	            Name: '2013 -2014 Citrus greening (USA) emergency',
+
+	            Main_Query: 'Years ago it was citrus canker ravaging groves. The latest natural blight is bacteria called \u201Ccitrus greening\u201D\u2014and it\u2019s already cost growers millions.\n\nThere\u2019s still no real cure for greening, but growers have been inundating their groves with pesticides, which is providing some relief.\n\nHowever, these pesticides are causing trouble for beekeepers who are also trying to weather some tough environmental stresses.\n\nHarold Curtis has been growing juice oranges in his grove near Fort Myers for almost two decades.  He said he was first a beekeeper. Producing honey has been in his family for generations, but several bad years led Curtis to leave beekeeping for orange groves. Now, \u201Ccitrus greening\u201D has hit that business hard.'
+	        }, {
+	            Name: 'Following EUS in Africa',
+
+	            Main_Query: 'February 2011 Epizootic Ulcerative Syndrome (EUS) is spreading in Africa\n\n      The Republic of South Africa is the 4th African country to report the epizootic ulcerative syndrome (EUS) on its territory, following earlier notifications by Botswana, Namibia and Zambia. This disease of fresh-water (fin)fish affects a large number of species and is caused by a fungus (oomycete) Aphanomyces invadans. While the three previous discoveries all occurred in the Chobe-Zambezi river basin, this new discovery was made in the far south of South Africa, in a dam on the Palmiet river, close to Grabouw in the Western Cape province. Lesions were discovered in wild finfish that have been living in the dam for a long time, while recently introduced rainbow trout for a fish farming operation, remained unaffected. EUS is an OIE-listed disease. The OIE Reference Laboratory for this disease is based in Thailand (AAHRI, Bangkok), but a laboratory twinning programme is underway with the University of Zambia (UNZA) . The FAO has produced an information leaflet regarding this disease, which is now also available in French, thanks to the financial support of the OIE Sub-regional Representation for Southern Africa, based in Botswana, one of the affected countries'
+	        }, {
+	            Name: 'Chronic Wasting Disease Norway 2016 /EU? - Emerging',
+
+	            Main_Query: 'This is the first detection of CWD in Europe and in reindeer. Previously it had been restricted to North America (USA and Canada) and South Korea (following importation of deer/reproductive material from Canada).'
+	        }, {
+	            Name: 'Lake Kinneret - Virus (TiLV) linked to tilapia mortalities [emerging disease Oct 2011 - ongoing]',
+
+	            Main_Query: 'For over one decade many fish species from the Sea of Galilee (Lake Kinneret - Isreal) have been suspected of dying from a mysterious disease.\n\nThe disease has been found in about 15% of the lakes fish population and also in fish ponds in the Hula Valley. So far, the disease is known to affect species such as St. Peter\'s Fish (tilapia), silver carp, carp, and mullet.\n\nThe disease was investigated in September 2011 by Isreal\'s Ministry of Agriculture Veterinary Services, but at that time no pathogen had been identified. Recent Ministry of Agriculture investigations have identified the problem is worsening in tilapia, which may be linked to the discovery of a virus affecting the eye.'
+	        }, {
+	            Name: 'Foot and mouth disease in South Korea',
+
+	            Main_Query: 'On 24 July 2014, South Korea reported an outbreak of type O foot and mouth disease in a pig farm in Gyeongsangbuk-do Province to the OIE: http://www.oie.int/wahis_2/public/wahid.php/Reviewreport/Review?page_refer=MapFullEventReport&reportid=15687&newlang=en. Infection was confirmed by antigen capture ELISA and PCR. Media reports suggest that 600 pigs of 1500 on the farm have been culled so far. Media reports suggest that the pigs had not been vaccinated. Vaccination for FMD serotypes O, A and Asia 1 is practiced in South Korea.\n\nOn 28 July 2014, South Korea reported a second outbreak around 70km away in a 2000-head piggery.\n\nIn May 2014, South Korea\'s FMD status had been recognised by the World Organisation for Animal Health as free with vaccination.'
+	        }, {
+	            Name: 'International trade in ornamental fish. What are the disease risks?',
+
+	            Main_Query: 'Researchers from the Western Australian Department of Fisheries say that detection and characterization of viruses of the genus Megalocytivirus in ornamental fish imported into Australia is an an emerging risk to national biosecurity.\n\nIs this an International issue?\n\nOrnamental fish can carry many OIE listed diseases, but there are no International standards, guidelines or recommendations for the ornamental fish industry to use.'
+	        }, {
+	            Name: 'Chile, Salmon farming, antibiotic use: 2015',
+
+	            Main_Query: 'CHILE - Oceana has been granted access to information on Chile\'s salmon farming antibiotic use between 2009 and 2013, following a unanimous ruling by Santiago\u2019s Court of Appeals.\n\n\u201CWe are pleased to hear the reversal of an incorrect ruling by the Transparency Council. Clearly, this is public information as it allows people to make decisions on fundamental issues, such as health and the environment, in addition to making scrutiny on whether the Government is effectively controlling this industry or not,\u201D stated Alex Mu\xF1oz, Vice President for Oceana in Chile.'
+	        }, {
+	            Name: '2014 Shortage in honeybees accounted for crop failures and financial losses',
+
+	            Main_Query: 'There are only enough honeybees in Britain to properly pollinate a quarter of the country\u2019s crops, scientists claim.\n\nDestruction of huge swathes of grassland and the use of agricultural chemicals have caused a spiralling drop in the populations of honeybees, which are vital for food production.'
+	        }, {
+	            Name: 'HSMI in BC May 2016-emerging',
+
+	            Main_Query: 'Vancouver, British Columbia - Applying newly introduced and integrated technologies, a team of international researchers, led by Fisheries and Oceans Canada\u2019s (DFO\u2019s) Dr. Kristi Miller, has diagnosed a potential Heart and Skeletal Muscle Inflammation in farmed Atlantic salmon samples collected from a B.C. aquaculture facility in 2013-2014. This research was undertaken as part of the Strategic Salmon Health Initiative (SSHI), a collaboration between DFO, the Pacific Salmon Foundation and Genome British Columbia to better understand the distribution of microbes and diseases in wild and cultured (hatchery and aquaculture) salmon in B.'
+	        }, {
+	            Name: 'African bushmeat trade',
+
+	            Main_Query: 'The illegal trade and sale of African bushmeat presents a number of serious biosecurity risks. In addition the trade and sale of these products has a significant impact on the maintenance of populations of protected (CITES) or endangered species.\n\nThis issue page has been created to monitor information on African bushmeat over the issue period to assist with understanding of this trade.'
+	        }],
 	        Article: [{
 	            Title: 'In Cyprus, two EU experts to nodular dermatitis of cattle - Ant1 internet world',
 	            Body: 'In Cyprus arrive this afternoon two representatives from veterinary emergency response team of the Directorate General of the European Union Health for addressing Lumpy skin disease outbreaks in cattle in the occupied territories.\n\n   According to what sources said the Ministry of Agriculture, Cyprus reaches another expert EU partner, with full specialization in nodular dermatitis, which comes from UK agency.  With the emergence of the disease in the territories, Agriculture Minister Nick Kougialis went exceptionally in Brussels, where he met with representatives of the EU Directorate General for Health, urging action by the European Commission in terms of the issue. In justifying the need for measures, the Minister said that this disease first appears on EU territory, located in a territory in which they enable the competent services of the Republic to take measures and thirdly there is concern about whether full and thorough implementation of existing under the European and international regulations to address and reduce the spread of these zoonoses, due to the bad experience was in the past with respect to Newcastle disease outbreaks in poultry.'
@@ -344,7 +449,7 @@
 	                HTML_Li_Items.push(_react2.default.createElement(
 	                    'li',
 	                    { className: 'list-group-item', key: iterator },
-	                    this.props.dataListName[iterator].Name,
+	                    this.props.dataListName[iterator].Name.length > 45 ? this.props.dataListName[iterator].Name.substring(0, 45) + '...' : this.props.dataListName[iterator].Name,
 	                    _react2.default.createElement(
 	                        'button',
 	                        { type: 'button', className: 'btn btn-default btn-xs' },
@@ -482,7 +587,7 @@
 	            var textInput = document.getElementById('search-text').value;
 
 	            // min 3 char
-	            if (textInput.length < 3) {
+	            if (textInput.length < 1) {
 	                return;
 	            }
 
@@ -516,34 +621,70 @@
 	                        }
 	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Group') {
 
-	                        for (var iteratorGroup = 0, lenGroup = Data.category.Group.Name.length; iteratorGroup < lenGroup; iteratorGroup++) {
+	                        for (var iteratorGroup = 0, lenGroup = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorGroup < lenGroup; iteratorGroup++) {
 
-	                            var _stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
+	                            var _stringLowerCase = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
 
 	                            if (_stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-	                                _this7.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
+	                                _this7.state.data.category.Group.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup]);
 	                            }
 	                        }
-	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Issue') {
-	                        for (var iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length; iteratorIssue < lenIssue; iteratorIssue++) {
 
-	                            var _stringLowerCase2 = Data.category.Issue.Name[iteratorIssue].toLowerCase();
+	                        /*************************g************/
+
+	                        /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
+	                               iteratorGroup < lenGroup; iteratorGroup++) {
+	                               let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
+	                               if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+	                                   this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
+	                               }
+	                          }*/
+	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Issue') {
+
+	                        for (var iteratorIssue = 0, lenIssue = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorIssue < lenIssue; iteratorIssue++) {
+
+	                            var _stringLowerCase2 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
 
 	                            if (_stringLowerCase2.indexOf(textLowerCase) !== -1) {
 
-	                                _this7.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
+	                                _this7.state.data.category.Issue.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue]);
 	                            }
 	                        }
-	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Searches') {} else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Article') {
+
+	                        /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
+	                             iteratorIssue < lenIssue; iteratorIssue++) {
+	                             let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
+	                             if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+	                                 this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
+	                             }
+	                        }*/
+	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Searches') {
+
+	                        for (var iteratorSearches = 0, lenSearches = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorSearches < lenSearches; iteratorSearches++) {
+
+	                            for (var iteratorSearchesParts = 0, lenTSearchesParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]).length; iteratorSearchesParts < lenTSearchesParts; iteratorSearchesParts++) {
+
+	                                var _stringLowerCase3 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches])[iteratorSearchesParts]].toLowerCase();
+
+	                                if (_stringLowerCase3.indexOf(textLowerCase) !== -1) {
+
+	                                    _this7.state.data.category.Searches.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]);
+
+	                                    // if found return;
+	                                    iteratorSearchesParts++;
+	                                }
+	                            }
+	                        }
+	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Article') {
 
 	                        for (var iteratorArticle = 0, lenArticle = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorArticle < lenArticle; iteratorArticle++) {
 
 	                            for (var iteratorArticleParts = 0, lenArticleParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]).length; iteratorArticleParts < lenArticleParts; iteratorArticleParts++) {
 
-	                                var _stringLowerCase3 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
+	                                var _stringLowerCase4 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
 
-	                                if (_stringLowerCase3.indexOf(textLowerCase) !== -1) {
+	                                if (_stringLowerCase4.indexOf(textLowerCase) !== -1) {
 
 	                                    _this7.state.data.category.Article.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]);
 
