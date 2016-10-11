@@ -88,7 +88,7 @@
 	 * Created by ruslan on 10.10.16.
 	 */
 
-	// import
+	// import lib
 	var Data = {
 
 	    category: {
@@ -330,8 +330,6 @@
 
 	    (0, _createClass3.default)(ListArticlesItem, [{
 	        key: 'render',
-
-	        // export in SearchResultCategoryRight point 1.
 	        value: function render() {
 
 	            return _react2.default.createElement(
@@ -347,7 +345,7 @@
 	                            'a',
 	                            { href: '#' },
 	                            _react2.default.createElement('img', { className: 'media-object',
-	                                src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTdiMzEzM2ZjMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1N2IzMTMzZmMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy44NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9zdmc+',
+	                                src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5k YWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGh laWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3 VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZ SBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2lt c2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTdiMzEzM2Z jMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldG ljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlP jwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1N2IzMTMzZmMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZp bGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy44NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9 zdmc+',
 	                                alt: '' })
 	                        )
 	                    ),
@@ -367,7 +365,6 @@
 	    }]);
 	    return ListArticlesItem;
 	}(_react2.default.Component);
-	/******************* .end view Articles *******************/
 
 	var SearchResultCategoryRight = function (_React$Component2) {
 	    (0, _inherits3.default)(SearchResultCategoryRight, _React$Component2);
@@ -383,7 +380,7 @@
 	        //export in SearchResultView point 2.
 
 	        value: function render() {
-	            console.log(this.props.dataArticles);
+
 	            var HTML_Div_Category_Right = []; //
 	            var lengthDataArticles = this.props.dataArticles.length > 5 ? 5 : this.props.dataArticles.length;
 	            for (var iterator = 0; iterator < lengthDataArticles; iterator++) {
@@ -425,6 +422,7 @@
 	    }]);
 	    return SearchResultCategoryRight;
 	}(_react2.default.Component);
+	/******************* .end view Articles *******************/
 
 	/****************** view block category left and he components *****************************/
 
@@ -438,10 +436,8 @@
 
 	    (0, _createClass3.default)(ListGroupItem, [{
 	        key: 'render',
-
-	        // export in SearchResultCategoryLeft point 1.
 	        value: function render() {
-	            console.log(this.props.dataListName[0]);
+
 	            var HTML_Li_Items = [];
 	            var lenghtPropsDataListName = this.props.dataListName.length > 5 ? 5 : this.props.dataListName.length;
 
@@ -502,7 +498,7 @@
 	                            this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length,
 	                            ' items)'
 	                        ),
-	                        this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length ? HTML_Button_ViewAll : null
+	                        this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length > 5 ? HTML_Button_ViewAll : null
 	                    ),
 	                    _react2.default.createElement(ListGroupItem, { dataListName: this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]] })
 	                ));
@@ -518,7 +514,7 @@
 	    return SearchResultCategoryLeft;
 	}(_react2.default.Component);
 
-	/****************** .end view block category *****************************/
+	/****************** .end view left block category *****************************/
 
 	/**************** view search result block *****************/
 
@@ -534,7 +530,6 @@
 	    (0, _createClass3.default)(SearchResultView, [{
 	        key: 'render',
 	        value: function render() {
-	            console.log(this.props.category);
 
 	            return _react2.default.createElement(
 	                'div',
@@ -580,137 +575,19 @@
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
 
-	            console.log(this.state.data);
+	            //console.log(this.state.data);
 	        }
 	    }, {
 	        key: 'handelClickButtonSearch',
 	        value: function handelClickButtonSearch() {
-	            var _this7 = this;
 
-	            var textInput = document.getElementById('search-text').value;
+	            //let textInput = document.getElementById('search-text').value;
 
-	            // min 3 char
-	            if (textInput.length < 1) {
-	                return;
-	            }
-
-	            var searchTextInData = function searchTextInData(text) {
-
-	                var textLowerCase = text.toLowerCase();
-
-	                for (var iteratorDefault = 0, lenDATA = (0, _keys2.default)(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
-	                    // Object.keys(Data.category) === ["Theme", "Group", "Issue", "Searches", "Article"]
-	                    // loop repeat 5 times
-	                    //Object.keys(Data.category)[iteratorDefault] === key;
-	                    if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Theme') {
-
-	                        //Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length === 17
-	                        for (var iteratorThemes = 0, lenThemes = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorThemes < lenThemes; iteratorThemes++) {
-
-	                            // Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]) === ["Name", "Description"]
-	                            for (var iteratorThemesParts = 0, lenThemesParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes]).length; iteratorThemesParts < lenThemesParts; iteratorThemesParts++) {
-
-	                                var stringLowerCase = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes])[iteratorThemesParts]].toLowerCase();
-
-	                                if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-	                                    // Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes] === found
-	                                    _this7.state.data.category.Theme.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes]);
-
-	                                    // if found return;
-	                                    iteratorThemesParts++;
-	                                }
-	                            }
-	                        }
-	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Group') {
-
-	                        for (var iteratorGroup = 0, lenGroup = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorGroup < lenGroup; iteratorGroup++) {
-
-	                            var _stringLowerCase = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
-
-	                            if (_stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-	                                _this7.state.data.category.Group.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup]);
-	                            }
-	                        }
-
-	                        /*************************g************/
-
-	                        /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
-	                         iteratorGroup < lenGroup; iteratorGroup++) {
-	                          let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
-	                          if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-	                          this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
-	                          }
-	                         }*/
-	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Issue') {
-
-	                        for (var iteratorIssue = 0, lenIssue = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorIssue < lenIssue; iteratorIssue++) {
-
-	                            var _stringLowerCase2 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
-
-	                            if (_stringLowerCase2.indexOf(textLowerCase) !== -1) {
-
-	                                _this7.state.data.category.Issue.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue]);
-	                            }
-	                        }
-
-	                        /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
-	                         iteratorIssue < lenIssue; iteratorIssue++) {
-	                          let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
-	                          if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-	                          this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
-	                          }
-	                         }*/
-	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Searches') {
-
-	                        for (var iteratorSearches = 0, lenSearches = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorSearches < lenSearches; iteratorSearches++) {
-
-	                            for (var iteratorSearchesParts = 0, lenTSearchesParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]).length; iteratorSearchesParts < lenTSearchesParts; iteratorSearchesParts++) {
-
-	                                var _stringLowerCase3 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches])[iteratorSearchesParts]].toLowerCase();
-
-	                                if (_stringLowerCase3.indexOf(textLowerCase) !== -1) {
-
-	                                    _this7.state.data.category.Searches.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]);
-
-	                                    // if found return;
-	                                    iteratorSearchesParts++;
-	                                }
-	                            }
-	                        }
-	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Article') {
-
-	                        for (var iteratorArticle = 0, lenArticle = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorArticle < lenArticle; iteratorArticle++) {
-
-	                            for (var iteratorArticleParts = 0, lenArticleParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]).length; iteratorArticleParts < lenArticleParts; iteratorArticleParts++) {
-
-	                                var _stringLowerCase4 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
-
-	                                if (_stringLowerCase4.indexOf(textLowerCase) !== -1) {
-
-	                                    _this7.state.data.category.Article.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]);
-
-	                                    // if found return;
-	                                    iteratorArticleParts++;
-	                                }
-	                            }
-	                        }
-	                    }
-	                }
-
-	                _this7.setState({
-	                    data: _this7.state.data
-	                });
-	                console.log(_this7.state.data);
-	            };
-
-	            searchTextInData(textInput);
 	        }
 	    }, {
 	        key: 'handleChangeInput',
 	        value: function handleChangeInput(event) {
-	            var _this8 = this;
+	            var _this7 = this;
 
 	            this.state.textInput = event.target.value;
 	            this.setState({ textInput: this.state.textInput });
@@ -739,7 +616,7 @@
 	                                    if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
 	                                        // Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes] === found
-	                                        _this8.state.data.category.Theme.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes]);
+	                                        _this7.state.data.category.Theme.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes]);
 
 	                                        // if found return;
 	                                        iteratorThemesParts++;
@@ -750,53 +627,35 @@
 
 	                            for (var iteratorGroup = 0, lenGroup = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorGroup < lenGroup; iteratorGroup++) {
 
-	                                var _stringLowerCase5 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
+	                                var _stringLowerCase = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
 
-	                                if (_stringLowerCase5.indexOf(textLowerCase) !== -1) {
+	                                if (_stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-	                                    _this8.state.data.category.Group.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup]);
+	                                    _this7.state.data.category.Group.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorGroup]);
 	                                }
 	                            }
-
-	                            /*************************g************/
-
-	                            /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
-	                             iteratorGroup < lenGroup; iteratorGroup++) {
-	                              let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
-	                              if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-	                              this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
-	                              }
-	                             }*/
 	                        } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Issue') {
 
 	                            for (var iteratorIssue = 0, lenIssue = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorIssue < lenIssue; iteratorIssue++) {
 
-	                                var _stringLowerCase6 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
+	                                var _stringLowerCase2 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
 
-	                                if (_stringLowerCase6.indexOf(textLowerCase) !== -1) {
+	                                if (_stringLowerCase2.indexOf(textLowerCase) !== -1) {
 
-	                                    _this8.state.data.category.Issue.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue]);
+	                                    _this7.state.data.category.Issue.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorIssue]);
 	                                }
 	                            }
-
-	                            /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
-	                             iteratorIssue < lenIssue; iteratorIssue++) {
-	                              let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
-	                              if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-	                              this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
-	                              }
-	                             }*/
 	                        } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Searches') {
 
 	                            for (var iteratorSearches = 0, lenSearches = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]]).length; iteratorSearches < lenSearches; iteratorSearches++) {
 
 	                                for (var iteratorSearchesParts = 0, lenTSearchesParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]).length; iteratorSearchesParts < lenTSearchesParts; iteratorSearchesParts++) {
 
-	                                    var _stringLowerCase7 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches])[iteratorSearchesParts]].toLowerCase();
+	                                    var _stringLowerCase3 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches])[iteratorSearchesParts]].toLowerCase();
 
-	                                    if (_stringLowerCase7.indexOf(textLowerCase) !== -1) {
+	                                    if (_stringLowerCase3.indexOf(textLowerCase) !== -1) {
 
-	                                        _this8.state.data.category.Searches.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]);
+	                                        _this7.state.data.category.Searches.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorSearches]);
 
 	                                        // if found return;
 	                                        iteratorSearchesParts++;
@@ -809,11 +668,11 @@
 
 	                                for (var iteratorArticleParts = 0, lenArticleParts = (0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]).length; iteratorArticleParts < lenArticleParts; iteratorArticleParts++) {
 
-	                                    var _stringLowerCase8 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
+	                                    var _stringLowerCase4 = Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle][(0, _keys2.default)(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
 
-	                                    if (_stringLowerCase8.indexOf(textLowerCase) !== -1) {
+	                                    if (_stringLowerCase4.indexOf(textLowerCase) !== -1) {
 
-	                                        _this8.state.data.category.Article.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]);
+	                                        _this7.state.data.category.Article.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]);
 
 	                                        // if found return;
 	                                        iteratorArticleParts++;
@@ -823,12 +682,33 @@
 	                        }
 	                    }
 
-	                    _this8.setState({
-	                        data: _this8.state.data
+	                    _this7.setState({
+	                        data: _this7.state.data
 	                    });
 	                };
 
 	                searchTextInData(this.state.textInput);
+	            } else {
+
+	                this.state.data.category.Theme.splice(0);
+	                this.state.data.category.Group.splice(0);
+	                this.state.data.category.Issue.splice(0);
+	                this.state.data.category.Searches.splice(0);
+	                this.state.data.category.Article.splice(0);
+
+	                this.setState({
+	                    data: {
+	                        category: {
+	                            Theme: this.state.data.category.Theme,
+	                            Group: this.state.data.category.Group,
+	                            Issue: this.state.data.category.Issue,
+	                            Searches: this.state.data.category.Searches,
+	                            Article: this.state.data.category.Article
+	                        }
+	                    }
+
+	                });
+	                console.log(this.state.data.category);
 	            }
 	        }
 	    }, {

@@ -2,7 +2,7 @@
  * Created by ruslan on 10.10.16.
  */
 
-// import
+// import lib
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -514,6 +514,7 @@ A key question now is whether this is a rare — even unique — case, or if the
 /******************** view Articles ***********************/
 class ListArticlesItem extends React.Component {
 // export in SearchResultCategoryRight point 1.
+
     render() {
 
         return (
@@ -523,29 +524,37 @@ class ListArticlesItem extends React.Component {
                     <div className="media-left">
                         <a href="#">
                             <img className="media-object"
-                                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTdiMzEzM2ZjMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1N2IzMTMzZmMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy44NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9zdmc+"
+                                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5k
+                                 YWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGh
+                                 laWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3
+                                 VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZ
+                                 SBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2lt
+                                 c2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTdiMzEzM2Z
+                                 jMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldG
+                                 ljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlP
+                                 jwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1N2IzMTMzZmMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZp
+                                 bGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy44NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9
+                                 zdmc+"
                                  alt=""/>
                         </a>
                     </div>
                     <div className="media-body">
                         <h4 className="media-heading">{this.props.dataListArticles.Title}</h4>
+                        {/* max lenght string 100 char */}
                         {this.props.dataListArticles.Body.substring(0, 100) + '...'}
                     </div>
                 </div>
             </li>
-
-
         );
     }
 }
-/******************* .end view Articles *******************/
 
 
 class SearchResultCategoryRight extends React.Component {
 //export in SearchResultView point 2.
 
     render() {
-        console.log(this.props.dataArticles);
+
         let HTML_Div_Category_Right = []; //
         let lengthDataArticles = (this.props.dataArticles.length > 5) ? 5 : this.props.dataArticles.length;
         for (let iterator = 0; iterator < lengthDataArticles; iterator++) {
@@ -571,19 +580,24 @@ class SearchResultCategoryRight extends React.Component {
         );
     }
 }
+/******************* .end view Articles *******************/
+
+
+
 
 /****************** view block category left and he components *****************************/
 
 class ListGroupItem extends React.Component {
 // export in SearchResultCategoryLeft point 1.
     render() {
-        console.log(this.props.dataListName[0]);
+
         let HTML_Li_Items = [];
         let lenghtPropsDataListName = (this.props.dataListName.length > 5) ? 5 : this.props.dataListName.length;
 
         for (let iterator = 0; iterator < lenghtPropsDataListName; iterator++) {
 
             HTML_Li_Items.push(<li className="list-group-item" key={iterator}>
+                {/* max lenght string is 45 char */}
                 {(this.props.dataListName[iterator].Name.length > 45) ?
                 this.props.dataListName[iterator].Name.substring(0, 45) + '...' :
                     this.props.dataListName[iterator].Name}
@@ -593,7 +607,6 @@ class ListGroupItem extends React.Component {
         return (
             <ul className="">
                 {HTML_Li_Items}
-
             </ul>
         );
     }
@@ -616,8 +629,9 @@ class SearchResultCategoryLeft extends React.Component {
                                 Found {this.props.dataCategory[
                                 Object.keys(this.props.dataCategory)[iterator]].length} items)
                             </span>
+                    {/* if items size is not > 5 button hide */}
                     {(this.props.dataCategory[
-                        Object.keys(this.props.dataCategory)[iterator]].length) ?
+                        Object.keys(this.props.dataCategory)[iterator]].length > 5) ?
                         HTML_Button_ViewAll : null}
 
                 </p>
@@ -639,15 +653,13 @@ class SearchResultCategoryLeft extends React.Component {
     }
 }
 
-/****************** .end view block category *****************************/
+/****************** .end view left block category *****************************/
 
 /**************** view search result block *****************/
 class SearchResultView extends React.Component {
 // export in App point 1.
 
     render() {
-        console.log(this.props.category);
-
 
         return (
             <div className="col-md-12 col-sm-12 col-lg-12 category ">
@@ -702,187 +714,12 @@ class App extends React.Component {
 
     componentWillMount() {
 
-        console.log(this.state.data);
+        //console.log(this.state.data);
     }
 
     handelClickButtonSearch() {
 
-
-        let textInput = document.getElementById('search-text').value;
-
-        // min 3 char
-        if (textInput.length < 1) {
-            return;
-        }
-
-
-        const searchTextInData = (text) => {
-
-            let textLowerCase = text.toLowerCase();
-
-
-            for (let iteratorDefault = 0, lenDATA = Object.keys(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
-                // Object.keys(Data.category) === ["Theme", "Group", "Issue", "Searches", "Article"]
-                // loop repeat 5 times
-                //Object.keys(Data.category)[iteratorDefault] === key;
-                if (Object.keys(Data.category)[iteratorDefault] === 'Theme') {
-
-
-                    //Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length === 17
-                    for (let iteratorThemes = 0, lenThemes = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
-                         iteratorThemes < lenThemes; iteratorThemes++) {
-
-                        // Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]) === ["Name", "Description"]
-                        for (let iteratorThemesParts = 0, lenThemesParts = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]).length;
-                             iteratorThemesParts < lenThemesParts; iteratorThemesParts++) {
-
-                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]
-                                [Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes])[iteratorThemesParts]].toLowerCase();
-
-                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-// Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes] === found
-                                this.state.data.category.Theme.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]);
-
-                                // if found return;
-                                iteratorThemesParts++;
-                            }
-
-
-                        }
-
-                    }
-                }
-                else if (Object.keys(Data.category)[iteratorDefault] === 'Group') {
-
-
-                    for (let iteratorGroup = 0, lenGroup = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
-                         iteratorGroup < lenGroup; iteratorGroup++) {
-
-
-                        let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
-
-                        if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                            this.state.data.category.Group.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup]);
-
-
-                        }
-
-
-                    }
-
-
-                    /*************************g************/
-
-
-                    /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
-                     iteratorGroup < lenGroup; iteratorGroup++) {
-
-                     let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
-
-                     if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                     this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
-
-                     }
-                     }*/
-
-                }
-                else if (Object.keys(Data.category)[iteratorDefault] === 'Issue') {
-
-
-                    for (let iteratorIssue = 0, lenIssue = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
-                         iteratorIssue < lenIssue; iteratorIssue++) {
-
-
-                        let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
-
-                        if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                            this.state.data.category.Issue.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue]);
-
-
-                        }
-
-
-                    }
-
-
-                    /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
-                     iteratorIssue < lenIssue; iteratorIssue++) {
-
-                     let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
-
-                     if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                     this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
-
-                     }
-                     }*/
-                }
-                else if (Object.keys(Data.category)[iteratorDefault] === 'Searches') {
-
-                    for (let iteratorSearches = 0, lenSearches = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
-                         iteratorSearches < lenSearches; iteratorSearches++) {
-
-                        for (let iteratorSearchesParts = 0, lenTSearchesParts = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches]).length;
-                             iteratorSearchesParts < lenTSearchesParts; iteratorSearchesParts++) {
-
-                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches]
-                                [Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches])[iteratorSearchesParts]].toLowerCase();
-
-                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                                this.state.data.category.Searches.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches]);
-
-                                // if found return;
-                                iteratorSearchesParts++;
-                            }
-
-
-                        }
-
-                    }
-
-                }
-                else if (Object.keys(Data.category)[iteratorDefault] === 'Article') {
-
-                    for (let iteratorArticle = 0, lenArticle = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
-                         iteratorArticle < lenArticle; iteratorArticle++) {
-
-
-                        for (let iteratorArticleParts = 0, lenArticleParts = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]).length;
-                             iteratorArticleParts < lenArticleParts; iteratorArticleParts++) {
-
-                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]
-                                [Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
-
-                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-
-                                this.state.data.category.Article.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]);
-
-                                // if found return;
-                                iteratorArticleParts++;
-                            }
-
-                        }
-
-                    }
-
-                }
-
-            }
-
-
-            this.setState({
-                data: this.state.data
-            });
-            console.log(this.state.data);
-        };
-
-        searchTextInData(textInput);
+        //let textInput = document.getElementById('search-text').value;
 
     }
 
@@ -899,7 +736,6 @@ class App extends React.Component {
             const searchTextInData = (text) => {
 
                 let textLowerCase = text.toLowerCase();
-
 
                 for (let iteratorDefault = 0, lenDATA = Object.keys(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
                     // Object.keys(Data.category) === ["Theme", "Group", "Issue", "Searches", "Article"]
@@ -927,10 +763,7 @@ class App extends React.Component {
                                     // if found return;
                                     iteratorThemesParts++;
                                 }
-
-
                             }
-
                         }
                     }
                     else if (Object.keys(Data.category)[iteratorDefault] === 'Group') {
@@ -946,28 +779,8 @@ class App extends React.Component {
 
                                 this.state.data.category.Group.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup]);
 
-
                             }
-
-
                         }
-
-
-                        /*************************g************/
-
-
-                        /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
-                         iteratorGroup < lenGroup; iteratorGroup++) {
-
-                         let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
-
-                         if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                         this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
-
-                         }
-                         }*/
-
                     }
                     else if (Object.keys(Data.category)[iteratorDefault] === 'Issue') {
 
@@ -982,24 +795,8 @@ class App extends React.Component {
 
                                 this.state.data.category.Issue.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue]);
 
-
                             }
-
-
                         }
-
-
-                        /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
-                         iteratorIssue < lenIssue; iteratorIssue++) {
-
-                         let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
-
-                         if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                         this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
-
-                         }
-                         }*/
                     }
                     else if (Object.keys(Data.category)[iteratorDefault] === 'Searches') {
 
@@ -1019,12 +816,8 @@ class App extends React.Component {
                                     // if found return;
                                     iteratorSearchesParts++;
                                 }
-
-
                             }
-
                         }
-
                     }
                     else if (Object.keys(Data.category)[iteratorDefault] === 'Article') {
 
@@ -1040,21 +833,15 @@ class App extends React.Component {
 
                                 if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-
                                     this.state.data.category.Article.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]);
 
                                     // if found return;
                                     iteratorArticleParts++;
                                 }
-
                             }
-
                         }
-
                     }
-
                 }
-
 
                 this.setState({
                     data: this.state.data
@@ -1064,13 +851,35 @@ class App extends React.Component {
 
             searchTextInData(this.state.textInput);
         }
+        else {
+
+            this.state.data.category.Theme.splice(0);
+            this.state.data.category.Group.splice(0);
+            this.state.data.category.Issue.splice(0);
+            this.state.data.category.Searches.splice(0);
+            this.state.data.category.Article.splice(0);
+
+            this.setState({
+                data: {
+                    category: {
+                        Theme: this.state.data.category.Theme,
+                        Group: this.state.data.category.Group,
+                        Issue: this.state.data.category.Issue,
+                        Searches: this.state.data.category.Searches,
+                        Article: this.state.data.category.Article
+                    }
+                }
+
+            });
+            console.log(this.state.data.category);
+        }
     }
 
     render() {
 
         let HTML_SearchResultView;
         if (this.state.textInput.length > 2) {
-            HTML_SearchResultView = <SearchResultView category={this.state.data.category}/>
+            HTML_SearchResultView = <SearchResultView category={this.state.data.category}/>;
         }
 
         return (

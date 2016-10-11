@@ -38,7 +38,7 @@ background-color: #F1F1F1;
         padding-left: 0px;
     padding-right: 0px;
 
-    border-right: 1px solid #ddd;
+
 }
 
 .category_left ul li{
@@ -56,6 +56,8 @@ background-color: #F1F1F1;
 .category_right{
     padding-left: 0px;
     padding-right: 0px;
+
+    border-left: 1px solid #ddd;
 }
 .category_right ul{
     list-style-type: none;
@@ -66,10 +68,7 @@ background-color: #F1F1F1;
     border-left-width: 0px;
     border-bottom-width: 0px;
 }
-.list-group-item:first-child{
 
-    border-top-width: 0px;
-}
 .list-group-item{
 
     border-left-width: 0px;
@@ -83,3 +82,7 @@ background-color: #F1F1F1;
     border-bottom-width: 0px;
 }
 
+.category_left .category_name:first-child p, .category_right .category_name:first-child p{
+border-top-width: 0px;
+    border-bottom-width: 0px;
+}

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290476ec-754a-4572-ba07-09c2447eba9b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ruslan.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
     </list>
     <ignored path="django.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,34 +43,33 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="621" column="0" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
+            <state relative-caret-position="645">
+              <caret line="737" column="55" selection-start-line="737" selection-start-column="55" selection-end-line="737" selection-end-column="55" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#53#78#0" expanded="true" />
-                <element signature="e#198#13109#0" expanded="false" />
-                <element signature="e#212#655#0" expanded="false" />
-                <element signature="e#669#1341#0" expanded="false" />
-                <element signature="e#1355#1786#0" expanded="false" />
-                <element signature="e#1800#2247#0" expanded="false" />
-                <element signature="e#2261#3669#0" expanded="false" />
-                <element signature="e#3683#4868#0" expanded="false" />
-                <element signature="e#4882#5770#0" expanded="false" />
-                <element signature="e#5784#6628#0" expanded="false" />
-                <element signature="e#6642#7993#0" expanded="false" />
-                <element signature="e#8007#8344#0" expanded="false" />
-                <element signature="e#8358#9218#0" expanded="false" />
-                <element signature="e#9232#10103#0" expanded="false" />
-                <element signature="e#10117#10691#0" expanded="false" />
-                <element signature="e#10705#11385#0" expanded="false" />
-                <element signature="e#11399#11844#0" expanded="false" />
-                <element signature="e#11858#12599#0" expanded="false" />
-                <element signature="e#12613#13098#0" expanded="false" />
-                <element signature="e#13126#13802#0" expanded="false" />
-                <element signature="e#13819#14621#0" expanded="false" />
-                <element signature="e#14641#27535#0" expanded="false" />
-                <element signature="e#27554#39355#0" expanded="false" />
-                <element signature="n#!!block;n#handelClickButtonSearch#0;n#App#0" expanded="false" />
+                <element signature="e#57#82#0" expanded="true" />
+                <element signature="e#202#13113#0" expanded="false" />
+                <element signature="e#216#659#0" expanded="false" />
+                <element signature="e#673#1345#0" expanded="false" />
+                <element signature="e#1359#1790#0" expanded="false" />
+                <element signature="e#1804#2251#0" expanded="false" />
+                <element signature="e#2265#3673#0" expanded="false" />
+                <element signature="e#3687#4872#0" expanded="false" />
+                <element signature="e#4886#5774#0" expanded="false" />
+                <element signature="e#5788#6632#0" expanded="false" />
+                <element signature="e#6646#7997#0" expanded="false" />
+                <element signature="e#8011#8348#0" expanded="false" />
+                <element signature="e#8362#9222#0" expanded="false" />
+                <element signature="e#9236#10107#0" expanded="false" />
+                <element signature="e#10121#10695#0" expanded="false" />
+                <element signature="e#10709#11389#0" expanded="false" />
+                <element signature="e#11403#11848#0" expanded="false" />
+                <element signature="e#11862#12603#0" expanded="false" />
+                <element signature="e#12617#13102#0" expanded="false" />
+                <element signature="e#13130#13806#0" expanded="false" />
+                <element signature="e#13823#14625#0" expanded="false" />
+                <element signature="e#27558#39359#0" expanded="false" />
+                <marker date="1476198599847" expanded="false" signature="14645:27539" ph="[...]" />
               </folding>
             </state>
           </provider>
@@ -77,8 +78,8 @@
       <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+            <state relative-caret-position="361">
+              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -108,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163821">
-              <caret line="9905" column="0" selection-start-line="9905" selection-start-column="0" selection-end-line="9905" selection-end-column="0" />
+              <caret line="9787" column="0" selection-start-line="9787" selection-start-column="0" selection-end-line="9787" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -224,8 +225,8 @@
         <option value="$PROJECT_DIR$/SearchPages/templates/blog/frontend/app/App.js" />
         <option value="$PROJECT_DIR$/SearchPages/templates/blog/frontend/app/home_page.js" />
         <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" />
-        <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
         <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
       </list>
     </option>
@@ -778,7 +779,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23825318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -787,7 +788,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31827956" sideWeight="0.4909297" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31827956" sideWeight="0.4909297" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1152,18 +1153,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163821">
-          <caret line="9905" column="0" selection-start-line="9905" selection-start-column="0" selection-end-line="9905" selection-end-column="0" />
+          <caret line="9787" column="0" selection-start-line="9787" selection-start-column="0" selection-end-line="9787" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1176,36 +1169,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="621" column="0" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
+        <state relative-caret-position="645">
+          <caret line="737" column="55" selection-start-line="737" selection-start-column="55" selection-end-line="737" selection-end-column="55" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#53#78#0" expanded="true" />
-            <element signature="e#198#13109#0" expanded="false" />
-            <element signature="e#212#655#0" expanded="false" />
-            <element signature="e#669#1341#0" expanded="false" />
-            <element signature="e#1355#1786#0" expanded="false" />
-            <element signature="e#1800#2247#0" expanded="false" />
-            <element signature="e#2261#3669#0" expanded="false" />
-            <element signature="e#3683#4868#0" expanded="false" />
-            <element signature="e#4882#5770#0" expanded="false" />
-            <element signature="e#5784#6628#0" expanded="false" />
-            <element signature="e#6642#7993#0" expanded="false" />
-            <element signature="e#8007#8344#0" expanded="false" />
-            <element signature="e#8358#9218#0" expanded="false" />
-            <element signature="e#9232#10103#0" expanded="false" />
-            <element signature="e#10117#10691#0" expanded="false" />
-            <element signature="e#10705#11385#0" expanded="false" />
-            <element signature="e#11399#11844#0" expanded="false" />
-            <element signature="e#11858#12599#0" expanded="false" />
-            <element signature="e#12613#13098#0" expanded="false" />
-            <element signature="e#13126#13802#0" expanded="false" />
-            <element signature="e#13819#14621#0" expanded="false" />
-            <element signature="e#14641#27535#0" expanded="false" />
-            <element signature="e#27554#39355#0" expanded="false" />
-            <element signature="n#!!block;n#handelClickButtonSearch#0;n#App#0" expanded="false" />
+            <element signature="e#57#82#0" expanded="true" />
+            <element signature="e#202#13113#0" expanded="false" />
+            <element signature="e#216#659#0" expanded="false" />
+            <element signature="e#673#1345#0" expanded="false" />
+            <element signature="e#1359#1790#0" expanded="false" />
+            <element signature="e#1804#2251#0" expanded="false" />
+            <element signature="e#2265#3673#0" expanded="false" />
+            <element signature="e#3687#4872#0" expanded="false" />
+            <element signature="e#4886#5774#0" expanded="false" />
+            <element signature="e#5788#6632#0" expanded="false" />
+            <element signature="e#6646#7997#0" expanded="false" />
+            <element signature="e#8011#8348#0" expanded="false" />
+            <element signature="e#8362#9222#0" expanded="false" />
+            <element signature="e#9236#10107#0" expanded="false" />
+            <element signature="e#10121#10695#0" expanded="false" />
+            <element signature="e#10709#11389#0" expanded="false" />
+            <element signature="e#11403#11848#0" expanded="false" />
+            <element signature="e#11862#12603#0" expanded="false" />
+            <element signature="e#12617#13102#0" expanded="false" />
+            <element signature="e#13130#13806#0" expanded="false" />
+            <element signature="e#13823#14625#0" expanded="false" />
+            <element signature="e#27558#39359#0" expanded="false" />
+            <marker date="1476198599847" expanded="false" signature="14645:27539" ph="[...]" />
           </folding>
         </state>
       </provider>
