@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290476ec-754a-4572-ba07-09c2447eba9b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" afterPath="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
     </list>
     <ignored path="django.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,18 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selectMenu/src/reducers/reducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-              <folding>
-                <element signature="e#42#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selectMenu/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,47 +39,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="589" column="18" selection-start-line="589" selection-start-column="18" selection-end-line="589" selection-end-column="18" />
+            <state relative-caret-position="326">
+              <caret line="559" column="60" selection-start-line="559" selection-start-column="46" selection-end-line="559" selection-end-column="60" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#53#78#0" expanded="true" />
-                <element signature="e#199#13110#0" expanded="false" />
-                <element signature="e#213#656#0" expanded="false" />
-                <element signature="e#670#1342#0" expanded="false" />
-                <element signature="e#1356#1787#0" expanded="false" />
-                <element signature="e#1801#2248#0" expanded="false" />
-                <element signature="e#2262#3670#0" expanded="false" />
-                <element signature="e#3684#4869#0" expanded="false" />
-                <element signature="e#4883#5771#0" expanded="false" />
-                <element signature="e#5785#6629#0" expanded="false" />
-                <element signature="e#6643#7994#0" expanded="false" />
-                <element signature="e#8008#8345#0" expanded="false" />
-                <element signature="e#8359#9219#0" expanded="false" />
-                <element signature="e#9233#10104#0" expanded="false" />
-                <element signature="e#10118#10692#0" expanded="false" />
-                <element signature="e#10706#11386#0" expanded="false" />
-                <element signature="e#11400#11845#0" expanded="false" />
-                <element signature="e#11859#12600#0" expanded="false" />
-                <element signature="e#12614#13099#0" expanded="false" />
-                <element signature="e#13127#13803#0" expanded="false" />
-                <element signature="e#13820#14622#0" expanded="false" />
-                <element signature="e#14642#27536#0" expanded="false" />
-                <element signature="e#27555#39356#0" expanded="false" />
-                <element signature="e#46744#53780#0" expanded="false" />
+                <element signature="e#198#13109#0" expanded="false" />
+                <element signature="e#212#655#0" expanded="false" />
+                <element signature="e#669#1341#0" expanded="false" />
+                <element signature="e#1355#1786#0" expanded="false" />
+                <element signature="e#1800#2247#0" expanded="false" />
+                <element signature="e#2261#3669#0" expanded="false" />
+                <element signature="e#3683#4868#0" expanded="false" />
+                <element signature="e#4882#5770#0" expanded="false" />
+                <element signature="e#5784#6628#0" expanded="false" />
+                <element signature="e#6642#7993#0" expanded="false" />
+                <element signature="e#8007#8344#0" expanded="false" />
+                <element signature="e#8358#9218#0" expanded="false" />
+                <element signature="e#9232#10103#0" expanded="false" />
+                <element signature="e#10117#10691#0" expanded="false" />
+                <element signature="e#10705#11385#0" expanded="false" />
+                <element signature="e#11399#11844#0" expanded="false" />
+                <element signature="e#11858#12599#0" expanded="false" />
+                <element signature="e#12613#13098#0" expanded="false" />
+                <element signature="e#13126#13802#0" expanded="false" />
+                <element signature="e#13819#14621#0" expanded="false" />
+                <element signature="e#14641#27535#0" expanded="false" />
+                <element signature="e#27554#39355#0" expanded="false" />
+                <element signature="e#46748#53784#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="396">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -226,8 +216,8 @@
         <option value="$PROJECT_DIR$/SearchPages/templates/blog/frontend/app/home_page.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html" />
-        <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
         <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js" />
+        <option value="$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css" />
       </list>
     </option>
   </component>
@@ -1083,14 +1073,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/blog/frontend/app/home_page.js" />
-    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/selectMenu/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1153,14 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectMenu/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1169,45 +1143,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/build.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="-1224">
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selectMenu/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/frontend/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="589" column="18" selection-start-line="589" selection-start-column="18" selection-end-line="589" selection-end-column="18" />
+        <state relative-caret-position="326">
+          <caret line="559" column="60" selection-start-line="559" selection-start-column="46" selection-end-line="559" selection-end-column="60" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#53#78#0" expanded="true" />
-            <element signature="e#199#13110#0" expanded="false" />
-            <element signature="e#213#656#0" expanded="false" />
-            <element signature="e#670#1342#0" expanded="false" />
-            <element signature="e#1356#1787#0" expanded="false" />
-            <element signature="e#1801#2248#0" expanded="false" />
-            <element signature="e#2262#3670#0" expanded="false" />
-            <element signature="e#3684#4869#0" expanded="false" />
-            <element signature="e#4883#5771#0" expanded="false" />
-            <element signature="e#5785#6629#0" expanded="false" />
-            <element signature="e#6643#7994#0" expanded="false" />
-            <element signature="e#8008#8345#0" expanded="false" />
-            <element signature="e#8359#9219#0" expanded="false" />
-            <element signature="e#9233#10104#0" expanded="false" />
-            <element signature="e#10118#10692#0" expanded="false" />
-            <element signature="e#10706#11386#0" expanded="false" />
-            <element signature="e#11400#11845#0" expanded="false" />
-            <element signature="e#11859#12600#0" expanded="false" />
-            <element signature="e#12614#13099#0" expanded="false" />
-            <element signature="e#13127#13803#0" expanded="false" />
-            <element signature="e#13820#14622#0" expanded="false" />
-            <element signature="e#14642#27536#0" expanded="false" />
-            <element signature="e#27555#39356#0" expanded="false" />
-            <element signature="e#46744#53780#0" expanded="false" />
+            <element signature="e#198#13109#0" expanded="false" />
+            <element signature="e#212#655#0" expanded="false" />
+            <element signature="e#669#1341#0" expanded="false" />
+            <element signature="e#1355#1786#0" expanded="false" />
+            <element signature="e#1800#2247#0" expanded="false" />
+            <element signature="e#2261#3669#0" expanded="false" />
+            <element signature="e#3683#4868#0" expanded="false" />
+            <element signature="e#4882#5770#0" expanded="false" />
+            <element signature="e#5784#6628#0" expanded="false" />
+            <element signature="e#6642#7993#0" expanded="false" />
+            <element signature="e#8007#8344#0" expanded="false" />
+            <element signature="e#8358#9218#0" expanded="false" />
+            <element signature="e#9232#10103#0" expanded="false" />
+            <element signature="e#10117#10691#0" expanded="false" />
+            <element signature="e#10705#11385#0" expanded="false" />
+            <element signature="e#11399#11844#0" expanded="false" />
+            <element signature="e#11858#12599#0" expanded="false" />
+            <element signature="e#12613#13098#0" expanded="false" />
+            <element signature="e#13126#13802#0" expanded="false" />
+            <element signature="e#13819#14621#0" expanded="false" />
+            <element signature="e#14641#27535#0" expanded="false" />
+            <element signature="e#27554#39355#0" expanded="false" />
+            <element signature="e#46748#53784#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchPages/templates/searchPage/publish/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

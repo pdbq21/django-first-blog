@@ -81,7 +81,8 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// end import
-	//
+
+
 	// data base / State
 	/**
 	 * Created by ruslan on 10.10.16.
@@ -393,7 +394,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-6 com-sm-6 category_right' },
+	                { className: 'col-md-6 com-sm-6 category_right ' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category_name list-group' },
@@ -509,7 +510,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-6 com-sm-6 category_left' },
+	                { className: 'col-md-6 com-sm-6 category_left ' },
 	                HTML_Div_Category_Name
 	            );
 	        }
@@ -537,7 +538,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 col-sm-12 col-lg-12 category', style: { display: this.props.style } },
+	                { className: 'col-md-12 col-sm-12 col-lg-12 category ', style: { display: this.props.style } },
 	                _react2.default.createElement(SearchResultCategoryLeft, { dataCategory: this.props.category }),
 	                _react2.default.createElement(SearchResultCategoryRight, { dataArticles: this.props.category.Article })
 	            );
@@ -577,6 +578,7 @@
 	    (0, _createClass3.default)(App, [{
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
+
 	            console.log(this.state.data);
 	        }
 	    }, {

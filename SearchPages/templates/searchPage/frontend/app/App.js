@@ -8,7 +8,8 @@ import ReactDOM from 'react-dom'
 
 
 // end import
-//
+
+
 // data base / State
 const Data = {
 
@@ -556,7 +557,7 @@ class SearchResultCategoryRight extends React.Component {
         }
 
         return (
-            <div className="col-md-6 com-sm-6 category_right">
+            <div className="col-md-6 com-sm-6 category_right ">
                 <div className="category_name list-group">
                     <p className="list-group-item"><span>Articles (Found {this.props.dataArticles.length} items) </span>
                         <button type="button" className="btn btn-default">View All</button>
@@ -625,7 +626,7 @@ class SearchResultCategoryLeft extends React.Component {
         }
 
         return (
-            <div className="col-md-6 com-sm-6 category_left">
+            <div className="col-md-6 com-sm-6 category_left ">
 
                 {HTML_Div_Category_Name}
 
@@ -646,7 +647,7 @@ class SearchResultView extends React.Component {
 
 
         return (
-            <div className="col-md-12 col-sm-12 col-lg-12 category" style={{display: this.props.style}}>
+            <div className="col-md-12 col-sm-12 col-lg-12 category " style={{display: this.props.style}}>
 
                 {/* 1. element category left*/}
                 <SearchResultCategoryLeft dataCategory={this.props.category}/>
@@ -696,6 +697,8 @@ class App extends React.Component {
     }
 
     componentWillMount() {
+
+
         console.log(this.state.data);
     }
 

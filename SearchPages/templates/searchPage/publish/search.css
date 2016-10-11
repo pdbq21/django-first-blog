@@ -5,7 +5,14 @@
 #root .row .form_block{
     display: inline-flex;
 }
-
+.category{
+    border: 1px solid #ddd;
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 97%;
+    margin-left: 15px;
+}
 #search-text{
     width: 93%;
 }
@@ -14,7 +21,7 @@ background-color: #EEEEEE;
         margin-bottom: 0px;
 }
 .category_name p{
-background-color: #a5a5a5;
+background-color: #F1F1F1;
 }
 .category_name button{
     float: right;
@@ -25,17 +32,19 @@ background-color: #a5a5a5;
         list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
-    color: #646a6d;
+
 }
 .category_left{
         padding-left: 0px;
     padding-right: 0px;
+
+    border-right: 1px solid #ddd;
 }
 
 .category_left ul li{
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: #F7F7F9;
+
 }
 
 .category button{
@@ -53,3 +62,24 @@ background-color: #a5a5a5;
     padding-left: 0px;
     margin-bottom: 0px;
 }
+.category_right p, .category_right li{
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+}
+.list-group-item:first-child{
+
+    border-top-width: 0px;
+}
+.list-group-item{
+
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    border-top-left-radius: 0px!important;
+    border-top-right-radius: 0px!important;
+}
+.list-group-item:last-child{
+
+    border-bottom-width: 0px;
+}
+
