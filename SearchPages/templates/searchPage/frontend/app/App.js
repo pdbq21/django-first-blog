@@ -584,7 +584,7 @@ class ListGroupItem extends React.Component {
         for (let iterator = 0; iterator < lenghtPropsDataListName; iterator++) {
 
             HTML_Li_Items.push(<li className="list-group-item" key={iterator}>
-                {(this.props.dataListName[iterator].Name.length > 45)?
+                {(this.props.dataListName[iterator].Name.length > 45) ?
                 this.props.dataListName[iterator].Name.substring(0, 45) + '...' :
                     this.props.dataListName[iterator].Name}
                 <button type="button" className="btn btn-default btn-xs">View</button>
@@ -604,7 +604,7 @@ class SearchResultCategoryLeft extends React.Component {
 //export in SearchResultView point 1.
 
     render() {
-
+        let HTML_Button_ViewAll = <button type="button" className="btn btn-default">View All</button>;
         let HTML_Div_Category_Name = [];
 // Object.keys(this.props.dataCategory).length - 1 / - Articles
         for (let iterator = 0, lenCategory = Object.keys(this.props.dataCategory).length - 1; iterator < lenCategory; iterator++) {
@@ -616,7 +616,10 @@ class SearchResultCategoryLeft extends React.Component {
                                 Found {this.props.dataCategory[
                                 Object.keys(this.props.dataCategory)[iterator]].length} items)
                             </span>
-                    <button type="button" className="btn btn-default">View All</button>
+                    {(this.props.dataCategory[
+                        Object.keys(this.props.dataCategory)[iterator]].length) ?
+                        HTML_Button_ViewAll : null}
+
                 </p>
                 {/* 1. list groups item  */}
                 <ListGroupItem dataListName={this.props.dataCategory[Object.keys(this.props.dataCategory)[iterator]]}/>
@@ -647,7 +650,7 @@ class SearchResultView extends React.Component {
 
 
         return (
-            <div className="col-md-12 col-sm-12 col-lg-12 category " style={{display: this.props.style}}>
+            <div className="col-md-12 col-sm-12 col-lg-12 category ">
 
                 {/* 1. element category left*/}
                 <SearchResultCategoryLeft dataCategory={this.props.category}/>
@@ -691,13 +694,13 @@ class App extends React.Component {
                     Searches: [],
                     Article: []
                 }
-            }
+            },
+            textInput: ''
 //data: {}
         }
     }
 
     componentWillMount() {
-
 
         console.log(this.state.data);
     }
@@ -757,39 +760,33 @@ class App extends React.Component {
                          iteratorGroup < lenGroup; iteratorGroup++) {
 
 
-                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
+                        let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
 
-                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+                        if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-                                this.state.data.category.Group.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup]);
-
-
-                            }
+                            this.state.data.category.Group.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup]);
 
 
+                        }
 
 
                     }
 
 
-
-
                     /*************************g************/
 
 
+                    /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
+                     iteratorGroup < lenGroup; iteratorGroup++) {
 
+                     let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
 
-                  /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
-                         iteratorGroup < lenGroup; iteratorGroup++) {
+                     if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-                        let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
+                     this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
 
-                        if (stringLowerCase.indexOf(textLowerCase) !== -1) {
-
-                            this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
-
-                        }
-                    }*/
+                     }
+                     }*/
 
                 }
                 else if (Object.keys(Data.category)[iteratorDefault] === 'Issue') {
@@ -799,33 +796,30 @@ class App extends React.Component {
                          iteratorIssue < lenIssue; iteratorIssue++) {
 
 
-                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
+                        let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
 
-                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+                        if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-                                this.state.data.category.Issue.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue]);
-
-
-                            }
+                            this.state.data.category.Issue.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue]);
 
 
+                        }
 
 
                     }
 
 
-
                     /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
-                         iteratorIssue < lenIssue; iteratorIssue++) {
+                     iteratorIssue < lenIssue; iteratorIssue++) {
 
-                        let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
+                     let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
 
-                        if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+                     if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-                            this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
+                     this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
 
-                        }
-                    }*/
+                     }
+                     }*/
                 }
                 else if (Object.keys(Data.category)[iteratorDefault] === 'Searches') {
 
@@ -892,13 +886,203 @@ class App extends React.Component {
 
     }
 
+    handleChangeInput(event) {
+
+
+        this.state.textInput = event.target.value;
+        this.setState({textInput: this.state.textInput});
+
+// min 3 char
+        if (this.state.textInput.length > 2) {
+
+
+            const searchTextInData = (text) => {
+
+                let textLowerCase = text.toLowerCase();
+
+
+                for (let iteratorDefault = 0, lenDATA = Object.keys(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
+                    // Object.keys(Data.category) === ["Theme", "Group", "Issue", "Searches", "Article"]
+                    // loop repeat 5 times
+                    //Object.keys(Data.category)[iteratorDefault] === key;
+                    if (Object.keys(Data.category)[iteratorDefault] === 'Theme') {
+
+
+                        //Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length === 17
+                        for (let iteratorThemes = 0, lenThemes = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
+                             iteratorThemes < lenThemes; iteratorThemes++) {
+
+                            // Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]) === ["Name", "Description"]
+                            for (let iteratorThemesParts = 0, lenThemesParts = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]).length;
+                                 iteratorThemesParts < lenThemesParts; iteratorThemesParts++) {
+
+                                let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]
+                                    [Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes])[iteratorThemesParts]].toLowerCase();
+
+                                if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+// Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes] === found
+                                    this.state.data.category.Theme.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes]);
+
+                                    // if found return;
+                                    iteratorThemesParts++;
+                                }
+
+
+                            }
+
+                        }
+                    }
+                    else if (Object.keys(Data.category)[iteratorDefault] === 'Group') {
+
+
+                        for (let iteratorGroup = 0, lenGroup = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
+                             iteratorGroup < lenGroup; iteratorGroup++) {
+
+
+                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup].Name.toLowerCase();
+
+                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+                                this.state.data.category.Group.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorGroup]);
+
+
+                            }
+
+
+                        }
+
+
+                        /*************************g************/
+
+
+                        /*  for (let iteratorGroup = 0, lenGroup = Data.category.Group.Name.length;
+                         iteratorGroup < lenGroup; iteratorGroup++) {
+
+                         let stringLowerCase = Data.category.Group.Name[iteratorGroup].toLowerCase();
+
+                         if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+                         this.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
+
+                         }
+                         }*/
+
+                    }
+                    else if (Object.keys(Data.category)[iteratorDefault] === 'Issue') {
+
+
+                        for (let iteratorIssue = 0, lenIssue = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
+                             iteratorIssue < lenIssue; iteratorIssue++) {
+
+
+                            let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue].Name.toLowerCase();
+
+                            if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+                                this.state.data.category.Issue.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorIssue]);
+
+
+                            }
+
+
+                        }
+
+
+                        /*for (let iteratorIssue = 0, lenIssue = Data.category.Issue.Name.length;
+                         iteratorIssue < lenIssue; iteratorIssue++) {
+
+                         let stringLowerCase = Data.category.Issue.Name[iteratorIssue].toLowerCase();
+
+                         if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+                         this.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
+
+                         }
+                         }*/
+                    }
+                    else if (Object.keys(Data.category)[iteratorDefault] === 'Searches') {
+
+                        for (let iteratorSearches = 0, lenSearches = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
+                             iteratorSearches < lenSearches; iteratorSearches++) {
+
+                            for (let iteratorSearchesParts = 0, lenTSearchesParts = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches]).length;
+                                 iteratorSearchesParts < lenTSearchesParts; iteratorSearchesParts++) {
+
+                                let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches]
+                                    [Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches])[iteratorSearchesParts]].toLowerCase();
+
+                                if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+                                    this.state.data.category.Searches.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorSearches]);
+
+                                    // if found return;
+                                    iteratorSearchesParts++;
+                                }
+
+
+                            }
+
+                        }
+
+                    }
+                    else if (Object.keys(Data.category)[iteratorDefault] === 'Article') {
+
+                        for (let iteratorArticle = 0, lenArticle = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]]).length;
+                             iteratorArticle < lenArticle; iteratorArticle++) {
+
+
+                            for (let iteratorArticleParts = 0, lenArticleParts = Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]).length;
+                                 iteratorArticleParts < lenArticleParts; iteratorArticleParts++) {
+
+                                let stringLowerCase = Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]
+                                    [Object.keys(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle])[iteratorArticleParts]].toLowerCase();
+
+                                if (stringLowerCase.indexOf(textLowerCase) !== -1) {
+
+
+                                    this.state.data.category.Article.push(Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorArticle]);
+
+                                    // if found return;
+                                    iteratorArticleParts++;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+
+                this.setState({
+                    data: this.state.data
+                });
+
+            };
+
+            searchTextInData(this.state.textInput);
+        }
+    }
+
     render() {
+
+        let HTML_SearchResultView;
+        if (this.state.textInput.length > 2) {
+            HTML_SearchResultView = <SearchResultView category={this.state.data.category}/>
+        }
+
         return (
             <div className="row">
 
                 <div className="col-md-12 col-sm-12 col-lg-12 form_block">
 
-                    <input type="text" id="search-text" className="form-control "/>
+                    <input type="text" id="search-text" className="form-control "
+                           onChange={this.handleChangeInput.bind(this)}
+
+                    />
+
                     <button type="button" className="btn btn-default search "
                             onClick={this.handelClickButtonSearch.bind(this)}>Search
                     </button>
@@ -906,26 +1090,22 @@ class App extends React.Component {
                 </div>
 
                 {/* 1. view search result */}
-                <SearchResultView category={this.state.data.category}
-                                  style={this.state.data.category.Theme.length ? 'block' : 'none'}/>
+                {HTML_SearchResultView}
                 {/* end 1. */}
             </div>
         );
     }
 }
 /********************** .end view root element ************************************/
-// end view search
 
 
-ReactDOM.render(
-    <App />
-    , document.getElementById('root')
-);
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 
 /*
  Note:
- - Searches none;
+ -
 
 
 
