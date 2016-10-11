@@ -214,119 +214,202 @@
 
 	/******************** view Articles ***********************/
 
-	var SearchArticles = function (_React$Component) {
-	    (0, _inherits3.default)(SearchArticles, _React$Component);
+	var ListArticlesItem = function (_React$Component) {
+	    (0, _inherits3.default)(ListArticlesItem, _React$Component);
 
-	    function SearchArticles() {
-	        (0, _classCallCheck3.default)(this, SearchArticles);
-	        return (0, _possibleConstructorReturn3.default)(this, (SearchArticles.__proto__ || (0, _getPrototypeOf2.default)(SearchArticles)).apply(this, arguments));
+	    function ListArticlesItem() {
+	        (0, _classCallCheck3.default)(this, ListArticlesItem);
+	        return (0, _possibleConstructorReturn3.default)(this, (ListArticlesItem.__proto__ || (0, _getPrototypeOf2.default)(ListArticlesItem)).apply(this, arguments));
 	    }
 
-	    (0, _createClass3.default)(SearchArticles, [{
+	    (0, _createClass3.default)(ListArticlesItem, [{
 	        key: 'render',
+
+	        // export in SearchResultCategoryRight point 1.
 	        value: function render() {
 
-	            return _react2.default.createElement('div', { className: '' });
+	            return _react2.default.createElement(
+	                'li',
+	                { className: 'list-group-item' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'media' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'media-left' },
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            _react2.default.createElement('img', { className: 'media-object',
+	                                src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTdiMzEzM2ZjMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1N2IzMTMzZmMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy44NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9zdmc+',
+	                                alt: '' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'media-body' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            { className: 'media-heading' },
+	                            this.props.dataListArticles.Title
+	                        ),
+	                        this.props.dataListArticles.Body.substring(0, 100) + '...'
+	                    )
+	                )
+	            );
 	        }
 	    }]);
-	    return SearchArticles;
+	    return ListArticlesItem;
 	}(_react2.default.Component);
 	/******************* .end view Articles *******************/
 
-	/**************** name category *******************/
+	var SearchResultCategoryRight = function (_React$Component2) {
+	    (0, _inherits3.default)(SearchResultCategoryRight, _React$Component2);
 
-
-	var DivNameCategory = function (_React$Component2) {
-	    (0, _inherits3.default)(DivNameCategory, _React$Component2);
-
-	    function DivNameCategory() {
-	        (0, _classCallCheck3.default)(this, DivNameCategory);
-	        return (0, _possibleConstructorReturn3.default)(this, (DivNameCategory.__proto__ || (0, _getPrototypeOf2.default)(DivNameCategory)).apply(this, arguments));
+	    function SearchResultCategoryRight() {
+	        (0, _classCallCheck3.default)(this, SearchResultCategoryRight);
+	        return (0, _possibleConstructorReturn3.default)(this, (SearchResultCategoryRight.__proto__ || (0, _getPrototypeOf2.default)(SearchResultCategoryRight)).apply(this, arguments));
 	    }
 
-	    (0, _createClass3.default)(DivNameCategory, [{
+	    (0, _createClass3.default)(SearchResultCategoryRight, [{
 	        key: 'render',
+
+	        //export in SearchResultView point 2.
+
 	        value: function render() {
-
-	            return _react2.default.createElement('div', { className: '' });
-	        }
-	    }]);
-	    return DivNameCategory;
-	}(_react2.default.Component);
-	/******************* .end name category *****************/
-
-	/********************* element list found ***********************/
-
-
-	var ElementListFound = function (_React$Component3) {
-	    (0, _inherits3.default)(ElementListFound, _React$Component3);
-
-	    function ElementListFound() {
-	        (0, _classCallCheck3.default)(this, ElementListFound);
-	        return (0, _possibleConstructorReturn3.default)(this, (ElementListFound.__proto__ || (0, _getPrototypeOf2.default)(ElementListFound)).apply(this, arguments));
-	    }
-
-	    (0, _createClass3.default)(ElementListFound, [{
-	        key: 'render',
-	        value: function render() {
-
-	            return _react2.default.createElement('li', null);
-	        }
-	    }]);
-	    return ElementListFound;
-	}(_react2.default.Component);
-	/***************** .end element list found *******************/
-
-	/***************** list items found ***********************/
-
-
-	var ListItemsFound = function (_React$Component4) {
-	    (0, _inherits3.default)(ListItemsFound, _React$Component4);
-
-	    function ListItemsFound() {
-	        (0, _classCallCheck3.default)(this, ListItemsFound);
-	        return (0, _possibleConstructorReturn3.default)(this, (ListItemsFound.__proto__ || (0, _getPrototypeOf2.default)(ListItemsFound)).apply(this, arguments));
-	    }
-
-	    (0, _createClass3.default)(ListItemsFound, [{
-	        key: 'render',
-	        value: function render() {
-
-	            return _react2.default.createElement(
-	                'ul',
-	                null,
-	                _react2.default.createElement(ElementListFound, null)
-	            );
-	        }
-	    }]);
-	    return ListItemsFound;
-	}(_react2.default.Component);
-	/***************** .end list items found ******************/
-
-	/****************** view block category *****************************/
-
-
-	var SearchResultCategory = function (_React$Component5) {
-	    (0, _inherits3.default)(SearchResultCategory, _React$Component5);
-
-	    function SearchResultCategory() {
-	        (0, _classCallCheck3.default)(this, SearchResultCategory);
-	        return (0, _possibleConstructorReturn3.default)(this, (SearchResultCategory.__proto__ || (0, _getPrototypeOf2.default)(SearchResultCategory)).apply(this, arguments));
-	    }
-
-	    (0, _createClass3.default)(SearchResultCategory, [{
-	        key: 'render',
-	        value: function render() {
+	            console.log(this.props.dataArticles);
+	            var HTML_Div_Category_Right = []; //
+	            var lengthDataArticles = this.props.dataArticles.length > 5 ? 5 : this.props.dataArticles.length;
+	            for (var iterator = 0; iterator < lengthDataArticles; iterator++) {
+	                /* 1. list articles*/
+	                HTML_Div_Category_Right.push(_react2.default.createElement(ListArticlesItem, { dataListArticles: this.props.dataArticles[iterator] }));
+	                /* end 1. */
+	            }
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: '' },
-	                _react2.default.createElement(DivNameCategory, null),
-	                _react2.default.createElement(ListItemsFound, null)
+	                { className: 'col-md-6 com-sm-6 category_right' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'category_name list-group' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        { className: 'list-group-item' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            'Articles (Found ',
+	                            this.props.dataArticles.length,
+	                            ' items) '
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'btn btn-default' },
+	                            'View All'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'ul',
+	                        { className: '' },
+	                        HTML_Div_Category_Right
+	                    )
+	                )
 	            );
 	        }
 	    }]);
-	    return SearchResultCategory;
+	    return SearchResultCategoryRight;
+	}(_react2.default.Component);
+
+	/****************** view block category left and he components *****************************/
+
+	var ListGroupItem = function (_React$Component3) {
+	    (0, _inherits3.default)(ListGroupItem, _React$Component3);
+
+	    function ListGroupItem() {
+	        (0, _classCallCheck3.default)(this, ListGroupItem);
+	        return (0, _possibleConstructorReturn3.default)(this, (ListGroupItem.__proto__ || (0, _getPrototypeOf2.default)(ListGroupItem)).apply(this, arguments));
+	    }
+
+	    (0, _createClass3.default)(ListGroupItem, [{
+	        key: 'render',
+
+	        // export in SearchResultCategoryLeft point 1.
+	        value: function render() {
+	            console.log(this.props.dataListName[0]);
+	            var HTML_Li_Items = [];
+	            var lenghtPropsDataListName = this.props.dataListName.length > 5 ? 5 : this.props.dataListName.length;
+
+	            for (var iterator = 0; iterator < lenghtPropsDataListName; iterator++) {
+
+	                HTML_Li_Items.push(_react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item', key: iterator },
+	                    this.props.dataListName[iterator].Name,
+	                    _react2.default.createElement(
+	                        'button',
+	                        { type: 'button', className: 'btn btn-default btn-xs' },
+	                        'View'
+	                    )
+	                ));
+	            }
+	            return _react2.default.createElement(
+	                'ul',
+	                { className: '' },
+	                HTML_Li_Items
+	            );
+	        }
+	    }]);
+	    return ListGroupItem;
+	}(_react2.default.Component);
+
+	var SearchResultCategoryLeft = function (_React$Component4) {
+	    (0, _inherits3.default)(SearchResultCategoryLeft, _React$Component4);
+
+	    function SearchResultCategoryLeft() {
+	        (0, _classCallCheck3.default)(this, SearchResultCategoryLeft);
+	        return (0, _possibleConstructorReturn3.default)(this, (SearchResultCategoryLeft.__proto__ || (0, _getPrototypeOf2.default)(SearchResultCategoryLeft)).apply(this, arguments));
+	    }
+
+	    (0, _createClass3.default)(SearchResultCategoryLeft, [{
+	        key: 'render',
+	        value: function render() {
+
+	            var HTML_Div_Category_Name = [];
+	            // Object.keys(this.props.dataCategory).length - 1 / - Articles
+	            for (var iterator = 0, lenCategory = (0, _keys2.default)(this.props.dataCategory).length - 1; iterator < lenCategory; iterator++) {
+
+	                HTML_Div_Category_Name.push(_react2.default.createElement(
+	                    'div',
+	                    { className: 'category_name list-group' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        { className: 'list-group-item' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            (0, _keys2.default)(this.props.dataCategory)[iterator],
+	                            ' ( Found ',
+	                            this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length,
+	                            ' items)'
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'btn btn-default' },
+	                            'View All'
+	                        )
+	                    ),
+	                    _react2.default.createElement(ListGroupItem, { dataListName: this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]] })
+	                ));
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-6 com-sm-6 category_left' },
+	                HTML_Div_Category_Name
+	            );
+	        }
+	    }]);
+	    return SearchResultCategoryLeft;
 	}(_react2.default.Component);
 
 	/****************** .end view block category *****************************/
@@ -334,8 +417,8 @@
 	/**************** view search result block *****************/
 
 
-	var SearchResultView = function (_React$Component6) {
-	    (0, _inherits3.default)(SearchResultView, _React$Component6);
+	var SearchResultView = function (_React$Component5) {
+	    (0, _inherits3.default)(SearchResultView, _React$Component5);
 
 	    function SearchResultView() {
 	        (0, _classCallCheck3.default)(this, SearchResultView);
@@ -346,304 +429,12 @@
 	        key: 'render',
 	        value: function render() {
 	            console.log(this.props.category);
-	            var HTML_Category = this.props.category;
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 col-sm-12' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-6 com-sm-6 category_left' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'category_name list-group' },
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'list-group-item' },
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                'Themes (Found # items) '
-	                            ),
-	                            _react2.default.createElement(
-	                                'button',
-	                                { type: 'button', className: 'btn btn-default' },
-	                                'View All'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'ul',
-	                            { className: '' },
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 1',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 2',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 3',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 4',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 5',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'category_name list-group' },
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'list-group-item' },
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                'Themes (Found # items) '
-	                            ),
-	                            _react2.default.createElement(
-	                                'button',
-	                                { type: 'button', className: 'btn btn-default' },
-	                                'View All'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'ul',
-	                            { className: '' },
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 1',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 2',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 3',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 4',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 5',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'category_name list-group' },
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'list-group-item' },
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                'Themes (Found # items) '
-	                            ),
-	                            _react2.default.createElement(
-	                                'button',
-	                                { type: 'button', className: 'btn btn-default' },
-	                                'View All'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'ul',
-	                            { className: '' },
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 1',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 2',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 3',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 4',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 5',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button', className: 'btn-group btn-group-xs' },
-	                                    'View'
-	                                )
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'category_name list-group' },
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'list-group-item' },
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                'Themes (Found # items) '
-	                            ),
-	                            _react2.default.createElement(
-	                                'button',
-	                                { type: 'button', className: 'btn btn-default' },
-	                                'View All'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'ul',
-	                            { className: '' },
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 1',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 2',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 3',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 4',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'li',
-	                                { className: 'list-group-item' },
-	                                'Test 5',
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { type: 'button' },
-	                                    'View'
-	                                )
-	                            )
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement('div', { className: 'col-md-6 com-sm-6' })
+	                { className: 'col-md-12 col-sm-12 col-lg-12 category', style: { display: this.props.style } },
+	                _react2.default.createElement(SearchResultCategoryLeft, { dataCategory: this.props.category }),
+	                _react2.default.createElement(SearchResultCategoryRight, { dataArticles: this.props.category.Article })
 	            );
 	        }
 	    }]);
@@ -654,15 +445,15 @@
 	/********************** view root element ************************************/
 
 
-	var App = function (_React$Component7) {
-	    (0, _inherits3.default)(App, _React$Component7);
+	var App = function (_React$Component6) {
+	    (0, _inherits3.default)(App, _React$Component6);
 
 	    function App(props) {
 	        (0, _classCallCheck3.default)(this, App);
 
-	        var _this7 = (0, _possibleConstructorReturn3.default)(this, (App.__proto__ || (0, _getPrototypeOf2.default)(App)).call(this, props));
+	        var _this6 = (0, _possibleConstructorReturn3.default)(this, (App.__proto__ || (0, _getPrototypeOf2.default)(App)).call(this, props));
 
-	        _this7.state = {
+	        _this6.state = {
 	            //getInitialState
 	            data: {
 	                category: {
@@ -675,7 +466,7 @@
 	            }
 	            //data: {}
 	        };
-	        return _this7;
+	        return _this6;
 	    }
 
 	    (0, _createClass3.default)(App, [{
@@ -686,7 +477,7 @@
 	    }, {
 	        key: 'handelClickButtonSearch',
 	        value: function handelClickButtonSearch() {
-	            var _this8 = this;
+	            var _this7 = this;
 
 	            var textInput = document.getElementById('search-text').value;
 
@@ -716,7 +507,7 @@
 	                                if (stringLowerCase.indexOf(textLowerCase) !== -1) {
 
 	                                    // Data.category[Object.keys(Data.category)[iteratorDefault]][iteratorThemes] === found
-	                                    _this8.state.data.category.Theme.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes]);
+	                                    _this7.state.data.category.Theme.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorThemes]);
 
 	                                    // if found return;
 	                                    iteratorThemesParts++;
@@ -731,7 +522,7 @@
 
 	                            if (_stringLowerCase.indexOf(textLowerCase) !== -1) {
 
-	                                _this8.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
+	                                _this7.state.data.category.Group.push(Data.category.Group.Name[iteratorGroup]);
 	                            }
 	                        }
 	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Issue') {
@@ -741,7 +532,7 @@
 
 	                            if (_stringLowerCase2.indexOf(textLowerCase) !== -1) {
 
-	                                _this8.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
+	                                _this7.state.data.category.Issue.push(Data.category.Issue.Name[iteratorIssue]);
 	                            }
 	                        }
 	                    } else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Searches') {} else if ((0, _keys2.default)(Data.category)[iteratorDefault] === 'Article') {
@@ -754,7 +545,7 @@
 
 	                                if (_stringLowerCase3.indexOf(textLowerCase) !== -1) {
 
-	                                    _this8.state.data.category.Article.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]);
+	                                    _this7.state.data.category.Article.push(Data.category[(0, _keys2.default)(Data.category)[iteratorDefault]][iteratorArticle]);
 
 	                                    // if found return;
 	                                    iteratorArticleParts++;
@@ -764,10 +555,10 @@
 	                    }
 	                }
 
-	                _this8.setState({
-	                    data: _this8.state.data
+	                _this7.setState({
+	                    data: _this7.state.data
 	                });
-	                console.log(_this8.state.data);
+	                console.log(_this7.state.data);
 	            };
 
 	            searchTextInData(textInput);
@@ -780,7 +571,7 @@
 	                { className: 'row' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-md-12 col-sm-12 form_block' },
+	                    { className: 'col-md-12 col-sm-12 col-lg-12 form_block' },
 	                    _react2.default.createElement('input', { type: 'text', id: 'search-text', className: 'form-control ' }),
 	                    _react2.default.createElement(
 	                        'button',
@@ -789,7 +580,8 @@
 	                        'Search'
 	                    )
 	                ),
-	                _react2.default.createElement(SearchResultView, { category: this.state.data.category })
+	                _react2.default.createElement(SearchResultView, { category: this.state.data.category,
+	                    style: this.state.data.category.Theme.length ? 'block' : 'none' })
 	            );
 	        }
 	    }]);

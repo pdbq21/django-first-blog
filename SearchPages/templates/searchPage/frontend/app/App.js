@@ -327,90 +327,122 @@ A key question now is whether this is a rare — even unique — case, or if the
 // view search
 
 /******************** view Articles ***********************/
-class SearchArticles extends React.Component {
-// export in SearchResultView point 2.
+class ListArticlesItem extends React.Component {
+// export in SearchResultCategoryRight point 1.
     render() {
 
+        return (
+
+                <li className="list-group-item">
+                    <div className="media">
+                        <div className="media-left">
+                            <a href="#">
+                                <img className="media-object"
+                                     src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTdiMzEzM2ZjMiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1N2IzMTMzZmMyIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy44NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9zdmc+"
+                                     alt=""/>
+                            </a>
+                        </div>
+                        <div className="media-body">
+                            <h4 className="media-heading">{this.props.dataListArticles.Title}</h4>
+                            {this.props.dataListArticles.Body.substring(0,100) + '...'}
+                        </div>
+                    </div>
+                </li>
+
+
+        );
+    }
+}
+/******************* .end view Articles *******************/
+
+
+class SearchResultCategoryRight extends React.Component {
+//export in SearchResultView point 2.
+
+    render() {
+        console.log(this.props.dataArticles);
+        let HTML_Div_Category_Right = []; //
+        let lengthDataArticles = (this.props.dataArticles.length > 5) ? 5 : this.props.dataArticles.length;
+        for (let iterator = 0; iterator < lengthDataArticles; iterator++) {
+/* 1. list articles*/
+            HTML_Div_Category_Right.push(
+                <ListArticlesItem dataListArticles={this.props.dataArticles[iterator]}/>
+            );
+/* end 1. */
+        }
 
         return (
-            <div className="">
-
-                {/* 1. name 'Articles'*/}
-
-                {/* end 1. */}
-                {/* 2. list items this category */}
-
+            <div className="col-md-6 com-sm-6 category_right">
+                <div className="category_name list-group">
+                    <p className="list-group-item"><span>Articles (Found {this.props.dataArticles.length} items) </span>
+                        <button type="button" className="btn btn-default">View All</button>
+                    </p>
+                    <ul className="">
+                    {HTML_Div_Category_Right}
+</ul>
+                </div>
             </div>
 
         );
     }
-
 }
-/******************* .end view Articles *******************/
 
-/**************** name category *******************/
-class DivNameCategory extends React.Component {
-// export in SearchResultCategory point 1.
+/****************** view block category left and he components *****************************/
+
+class ListGroupItem extends React.Component {
+// export in SearchResultCategoryLeft point 1.
     render() {
+        console.log(this.props.dataListName[0]);
+        let HTML_Li_Items = [];
+        let lenghtPropsDataListName = (this.props.dataListName.length > 5) ? 5 : this.props.dataListName.length;
 
+        for (let iterator = 0; iterator < lenghtPropsDataListName; iterator++) {
+
+            HTML_Li_Items.push(<li className="list-group-item" key={iterator}>
+                {this.props.dataListName[iterator].Name}
+                <button type="button" className="btn btn-default btn-xs">View</button>
+            </li>)
+        }
         return (
-            <div className="">
-                {/* name category + (Found # items)*/}
-                {/* button 'View All'*/}
-            </div>
-        )
-    }
-}
-/******************* .end name category *****************/
+            <ul className="">
+                {HTML_Li_Items}
 
-/********************* element list found ***********************/
-class ElementListFound extends React.Component {
-// export in ListItemsFound point 1.
-
-    render() {
-
-        return (
-            <li>
-                {/* string */}
-                {/* button 'View' */}
-            </li>
-        )
-
-    }
-}
-/***************** .end element list found *******************/
-
-/***************** list items found ***********************/
-class ListItemsFound extends React.Component {
-// export in SearchResultCategory point 2.
-    render() {
-
-        return (
-            <ul>
-                {/* 1. element list */}
-                <ElementListFound />
-                {/* end 1. */}
             </ul>
-        )
+        );
     }
 }
-/***************** .end list items found ******************/
 
-/****************** view block category *****************************/
-class SearchResultCategory extends React.Component {
+
+class SearchResultCategoryLeft extends React.Component {
 //export in SearchResultView point 1.
 
     render() {
 
-        return (
-            <div className="">
+        let HTML_Div_Category_Name = [];
+// Object.keys(this.props.dataCategory).length - 1 / - Articles
+        for (let iterator = 0, lenCategory = Object.keys(this.props.dataCategory).length - 1; iterator < lenCategory; iterator++) {
 
-                {/* 1. name category */}
-                <DivNameCategory />
-                {/* end 1.*/}
-                {/* 2. found list items this category */}
-                <ListItemsFound />
-                {/* end 2. */}
+            HTML_Div_Category_Name.push(<div className="category_name list-group">
+                <p className="list-group-item">
+                            <span>
+                                {Object.keys(this.props.dataCategory)[iterator]} (
+                                Found {this.props.dataCategory[
+                                Object.keys(this.props.dataCategory)[iterator]].length} items)
+                            </span>
+                    <button type="button" className="btn btn-default">View All</button>
+                </p>
+                {/* 1. list groups item  */}
+                <ListGroupItem dataListName={this.props.dataCategory[Object.keys(this.props.dataCategory)[iterator]]}/>
+                {/* end 1. */}
+            </div>);
+
+        }
+
+        return (
+            <div className="col-md-6 com-sm-6 category_left">
+
+                {HTML_Div_Category_Name}
+
             </div>
 
         );
@@ -425,120 +457,16 @@ class SearchResultView extends React.Component {
 
     render() {
         console.log(this.props.category);
-        let HTML_Category = this.props.category;
+
 
         return (
+            <div className="col-md-12 col-sm-12 col-lg-12 category" style={{display: this.props.style}}>
 
-
-            <div className="col-md-12 col-sm-12">
-                {/*HTML_Category*/}
-                <div className="col-md-6 com-sm-6 category_left">
-                    <div className="category_name list-group">
-                        <p className="list-group-item"><span>Themes (Found # items) </span>
-                            <button type="button" className="btn btn-default">View All</button>
-                        </p>
-                        <ul className="">
-                            <li className="list-group-item">Test 1
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 2
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 3
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 4
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 5
-                                <button type="button">View</button>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div className="category_name list-group">
-                        <p className="list-group-item"><span>Themes (Found # items) </span>
-                            <button type="button" className="btn btn-default">View All</button>
-                        </p>
-                        <ul className="">
-                            <li className="list-group-item">Test 1
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 2
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 3
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 4
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 5
-                                <button type="button">View</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="category_name list-group">
-                        <p className="list-group-item"><span>Themes (Found # items) </span>
-                            <button type="button" className="btn btn-default">View All</button>
-                        </p>
-                        <ul className="">
-                            <li className="list-group-item">Test 1
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 2
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 3
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 4
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 5
-                                <button type="button" className="btn-group btn-group-xs">View</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="category_name list-group">
-                        <p className="list-group-item"><span>Themes (Found # items) </span>
-                            <button type="button" className="btn btn-default">View All</button>
-                        </p>
-                        <ul className="">
-                            <li className="list-group-item">Test 1
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 2
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 3
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 4
-                                <button type="button">View</button>
-                            </li>
-                            <li className="list-group-item">Test 5
-                                <button type="button">View</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div className="col-md-6 com-sm-6">
-
-                </div>
-
-
-                {/* 1. element category*/}
-                {/*<SearchResultCategory category={this.props.data.category}/>*/}
-
+                {/* 1. element category left*/}
+                <SearchResultCategoryLeft dataCategory={this.props.category}/>
                 {/* end 1.*/}
-                {/* 2. element articles */}
-                {/*<SearchArticles />*/}
+                {/* 2. element category right articles */}
+                <SearchResultCategoryRight dataArticles={this.props.category.Article}/>
                 {/* end 2.*/}
             </div>
 
@@ -587,12 +515,14 @@ class App extends React.Component {
 
     handelClickButtonSearch() {
 
+
         let textInput = document.getElementById('search-text').value;
 
         // min 3 char
         if (textInput.length < 3) {
             return;
         }
+
 
         const searchTextInData = (text) => {
 
@@ -706,7 +636,7 @@ class App extends React.Component {
         return (
             <div className="row">
 
-                <div className="col-md-12 col-sm-12 form_block">
+                <div className="col-md-12 col-sm-12 col-lg-12 form_block">
 
                     <input type="text" id="search-text" className="form-control "/>
                     <button type="button" className="btn btn-default search "
@@ -716,7 +646,8 @@ class App extends React.Component {
                 </div>
 
                 {/* 1. view search result */}
-                <SearchResultView category={this.state.data.category}/>
+                <SearchResultView category={this.state.data.category}
+                                  style={this.state.data.category.Theme.length ? 'block' : 'none'}/>
                 {/* end 1. */}
             </div>
         );
@@ -727,7 +658,8 @@ class App extends React.Component {
 
 
 ReactDOM.render(
-    <App />, document.getElementById('root')
+    <App />
+    , document.getElementById('root')
 );
 
 

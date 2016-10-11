@@ -7,7 +7,7 @@
 }
 
 #search-text{
-    width: 80%;
+    width: 93%;
 }
 .category_name{
 background-color: #EEEEEE;
@@ -25,16 +25,31 @@ background-color: #a5a5a5;
         list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
+    color: #646a6d;
 }
 .category_left{
         padding-left: 0px;
+    padding-right: 0px;
 }
 
 .category_left ul li{
     padding-bottom: 5px;
     padding-top: 5px;
+    background-color: #F7F7F9;
 }
 
-.category_left ul li button{
+.category button{
     float: right;
+        padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.category_right{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.category_right ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
 }
