@@ -566,7 +566,7 @@ class SearchResultCategoryRight extends React.Component {
         }
 
         return (
-            <div className="col-md-6 com-sm-6 category_right ">
+            <div id="category_right" className="col-md-6 com-sm-6  ">
                 <div className="category_name list-group">
                     <p className="list-group-item"><span>Articles (Found {this.props.dataArticles.length} items) </span>
                         <button type="button" className="btn btn-default">View All</button>
@@ -643,7 +643,7 @@ class SearchResultCategoryLeft extends React.Component {
         }
 
         return (
-            <div className="col-md-6 com-sm-6 category_left ">
+            <div id="category_left" className="col-md-6 com-sm-6  ">
 
                 {HTML_Div_Category_Name}
 
@@ -712,9 +712,9 @@ class App extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
+//document.getElementById('category_left');
 
-        //console.log(this.state.data);
     }
 
     handelClickButtonSearch() {
@@ -725,6 +725,7 @@ class App extends React.Component {
 
     handleChangeInput(event) {
 
+console.log(document.getElementById('category_left').style);
 
         this.state.textInput = event.target.value;
         this.setState({textInput: this.state.textInput});
@@ -850,6 +851,7 @@ class App extends React.Component {
             };
 
             searchTextInData(this.state.textInput);
+
         }
         else {
 

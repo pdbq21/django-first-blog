@@ -28,20 +28,20 @@ background-color: #F1F1F1;
     padding: 0.2em 0.5em 0.2em 0.5em;
 }
 
-.category_left ul{
+#category_left ul{
         list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
 
 }
-.category_left{
+#category_left{
         padding-left: 0px;
     padding-right: 0px;
 
 
 }
 
-.category_left ul li{
+#category_left ul li{
     padding-bottom: 5px;
     padding-top: 5px;
 
@@ -53,18 +53,18 @@ background-color: #F1F1F1;
     padding-top: 0px;
 }
 
-.category_right{
+#category_right{
     padding-left: 0px;
     padding-right: 0px;
 
     border-left: 1px solid #ddd;
 }
-.category_right ul{
+#category_right ul{
     list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
 }
-.category_right p, .category_right li{
+#category_right p, .category_right li{
     border-left-width: 0px;
     border-bottom-width: 0px;
 }
@@ -82,7 +82,7 @@ background-color: #F1F1F1;
     border-bottom-width: 0px;
 }
 
-.category_left .category_name:first-child p, .category_right .category_name:first-child p{
+#category_left .category_name:first-child p, #category_right .category_name:first-child p{
 border-top-width: 0px;
     border-bottom-width: 0px;
 }
