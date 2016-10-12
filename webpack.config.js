@@ -8,12 +8,12 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
 
-        home: './selectMenu/src/index.js'
+        home: './SearchPages/templates/searchPage/frontend/app/App.js'
 
     },
     //'./testWebpack/home',
     output: {
-        path: __dirname + '/selectMenu',
+        path: __dirname + '/SearchPages/templates/searchPage/publish',
         /*filename: '[name].js',
         library: '[name]'*/
         filename: 'build.js'
@@ -42,15 +42,16 @@ module.exports = {
                     presets: ['es2015', 'stage-0', 'react']
                 }
             },
-            {test: /\.css$/, loader: 'style!styles!'}
+
+
         ]
     },
     plugins: [
-        /*new webpack.optimize.UglifyJsPlugin({
+        new webpack.optimize.UglifyJsPlugin({
          warnings: false,
          booleans: false,
          unused: false,
-         minimize: true}),*/
+         minimize: true}),
 
         new webpack.DefinePlugin({
             'process.env': {

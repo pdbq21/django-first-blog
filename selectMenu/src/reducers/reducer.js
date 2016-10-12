@@ -30,3 +30,4 @@ function listTags(state = [], action) {
 
 }
 
+export default listTags;

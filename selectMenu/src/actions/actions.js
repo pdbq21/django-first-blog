@@ -8,7 +8,7 @@
 * */
 
 // constant type action
-// need for export Reducers
+// need for import in Reducers
 
 export const ADD_TAGS = 'ADD_TAGS';
 export const DELETE_TAG = 'DELETE_TAG';
