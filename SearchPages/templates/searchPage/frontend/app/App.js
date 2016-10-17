@@ -566,10 +566,13 @@ class SearchResultCategoryRight extends React.Component {
         }
 
         return (
-            <div id="category_right" className="col-md-6 com-sm-6  ">
+            <div id="category_right" className="col-sm-6 col-md-6 col-lg-6  ">
                 <div className="category_name list-group">
                     <p className="list-group-item"><span>Articles (Found {this.props.dataArticles.length} items) </span>
-                        <button type="button" className="btn btn-default">View All</button>
+                        {/* if items size is not > 5 button hide */}
+                        {(this.props.dataArticles.length > 5) ?
+                            <button type="button" className="btn btn-default">View All</button> : null}
+
                     </p>
                     <ul className="">
                         {HTML_Div_Category_Right}
@@ -581,8 +584,6 @@ class SearchResultCategoryRight extends React.Component {
     }
 }
 /******************* .end view Articles *******************/
-
-
 
 
 /****************** view block category left and he components *****************************/
@@ -617,7 +618,6 @@ class SearchResultCategoryLeft extends React.Component {
 //export in SearchResultView point 1.
 
     render() {
-        let HTML_Button_ViewAll = <button type="button" className="btn btn-default">View All</button>;
         let HTML_Div_Category_Name = [];
 // Object.keys(this.props.dataCategory).length - 1 / - Articles
         for (let iterator = 0, lenCategory = Object.keys(this.props.dataCategory).length - 1; iterator < lenCategory; iterator++) {
@@ -632,7 +632,7 @@ class SearchResultCategoryLeft extends React.Component {
                     {/* if items size is not > 5 button hide */}
                     {(this.props.dataCategory[
                         Object.keys(this.props.dataCategory)[iterator]].length > 5) ?
-                        HTML_Button_ViewAll : null}
+                        <button type="button" className="btn btn-default">View All</button> : null}
 
                 </p>
                 {/* 1. list groups item  */}
@@ -643,7 +643,7 @@ class SearchResultCategoryLeft extends React.Component {
         }
 
         return (
-            <div id="category_left" className="col-md-6 com-sm-6  ">
+            <div id="category_left" className="col-sm-6 col-md-6 col-lg-6 ">
 
                 {HTML_Div_Category_Name}
 
@@ -662,7 +662,7 @@ class SearchResultView extends React.Component {
     render() {
 
         return (
-            <div className="col-md-12 col-sm-12 col-lg-12 category ">
+            <div className="col-sm-12 col-md-12 col-lg-12 category ">
 
                 {/* 1. element category left*/}
                 <SearchResultCategoryLeft dataCategory={this.props.category}/>
@@ -679,19 +679,6 @@ class SearchResultView extends React.Component {
 
 /********************** view root element ************************************/
 class App extends React.Component {
-
-
-    static propTypes = {
-// Example:
-//      title: React.PropTypes.string.isRequired,
-//      price: React.PropTypes.number.isRequired,
-    };
-
-    static defaultProps = {
-// Example:
-//      title: defaultTitle
-//      price: defaultPrice
-    };
 
 
     constructor(props) {
@@ -712,30 +699,49 @@ class App extends React.Component {
         }
     }
 
-    componentDidMount() {
-//document.getElementById('category_left');
+    componentDidUpdate() {
+        // in order to height 'category_right' === height parent element
+        if (document.getElementById("category_left")) {
+            if (document.getElementById("category_left").clientHeight > document.getElementById("category_right").clientHeight) {
+                document.getElementById("category_right").style.height = document.getElementById("category_left").clientHeight + 'px';
+            }
 
+
+        }
+//        console.log(document.getElementById("category_left").clientHeight);
     }
 
     handelClickButtonSearch() {
-
+// empty
         //let textInput = document.getElementById('search-text').value;
 
     }
 
+
     handleChangeInput(event) {
 
-console.log(document.getElementById('category_left').style);
 
         this.state.textInput = event.target.value;
         this.setState({textInput: this.state.textInput});
 
+
+// search function
+        const searchTextInData = (text) => {
+
+            this.setState({
+                data: {
+                    category: {
+                        Theme: this.state.data.category.Theme.splice(0),
+                        Group: this.state.data.category.Group.splice(0),
+                        Issue: this.state.data.category.Issue.splice(0),
+                        Searches: this.state.data.category.Searches.splice(0),
+                        Article: this.state.data.category.Article.splice(0)
+                    }
+                }
+
+            });
 // min 3 char
-        if (this.state.textInput.length > 2) {
-
-
-            const searchTextInData = (text) => {
-
+            if (this.state.textInput.length > 2) {
                 let textLowerCase = text.toLowerCase();
 
                 for (let iteratorDefault = 0, lenDATA = Object.keys(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
@@ -843,38 +849,32 @@ console.log(document.getElementById('category_left').style);
                         }
                     }
                 }
-
-                this.setState({
-                    data: this.state.data
-                });
-
-            };
-
-            searchTextInData(this.state.textInput);
-
-        }
-        else {
-
-            this.state.data.category.Theme.splice(0);
-            this.state.data.category.Group.splice(0);
-            this.state.data.category.Issue.splice(0);
-            this.state.data.category.Searches.splice(0);
-            this.state.data.category.Article.splice(0);
+            }
 
             this.setState({
-                data: {
-                    category: {
-                        Theme: this.state.data.category.Theme,
-                        Group: this.state.data.category.Group,
-                        Issue: this.state.data.category.Issue,
-                        Searches: this.state.data.category.Searches,
-                        Article: this.state.data.category.Article
-                    }
-                }
-
+                data: this.state.data
             });
-            console.log(this.state.data.category);
-        }
+
+        };
+
+        searchTextInData(this.state.textInput);
+
+
+        /* this.setState({
+         data: {
+         category: {
+         Theme: [],
+         Group: [],
+         Issue: [],
+         Searches: [],
+         Article: []
+         }
+         }
+
+         });*/
+        //console.log(this.state.data.category);
+
+        console.log(this.state.data.category);
     }
 
     render() {
@@ -887,7 +887,7 @@ console.log(document.getElementById('category_left').style);
         return (
             <div className="row">
 
-                <div className="col-md-12 col-sm-12 col-lg-12 form_block">
+                <div className="col-sm-12 col-md-12 col-lg-12 form_block">
 
                     <input type="text" id="search-text" className="form-control "
                            onChange={this.handleChangeInput.bind(this)}

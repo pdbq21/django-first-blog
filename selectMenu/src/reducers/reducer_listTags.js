@@ -1,16 +1,30 @@
 /**
  * Created by ruslan on 07.10.16.
  */
-import {CombineReducers} from 'redux'
-
+// constant  names ActionTypes
 import {ADD_TAGS, DELETE_ALL_TAGS, DELETE_TAG} from '../actions/actions'
 
-function listTags(state = [], action) {
+
+// initialSate:
+// можна оголосити константою на початку або паметром по замовчуванню для кодного значення state;
+/*
+    Example:
+const initialState = {
+    text: ''
+    };
+
+    or
+
+    function(state = {text: ''}, action)
+ */
+
+
+function listTags(state = {text: ''}, action) {
 
     if (action.type === ADD_TAGS) {
         return [
             ...state, {
-                text: action.text
+                text: action.payload
             }
         ]
     }

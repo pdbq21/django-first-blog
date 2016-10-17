@@ -20,12 +20,12 @@ export const DELETE_ALL_TAGS = 'DELETE_ALL_TAGS';
 
 export const clickButton = text => ({
     type: 'ADD_TAGS',
-    text
+    payload: text
 });
 
 export const clickDeleteTag = id => ({
    type: 'DELETE_TAG',
-    id
+    payload: id
 });
 
 export const clickClear = () => ({
