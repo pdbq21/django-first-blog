@@ -376,9 +376,6 @@
 
 	    (0, _createClass3.default)(SearchResultCategoryRight, [{
 	        key: 'render',
-
-	        //export in SearchResultView point 2.
-
 	        value: function render() {
 
 	            var HTML_Div_Category_Right = []; //
@@ -391,7 +388,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { id: 'category_right', className: 'col-md-6 com-sm-6  ' },
+	                { id: 'category_right', className: 'col-sm-6 col-md-6 col-lg-6  ' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category_name list-group' },
@@ -405,11 +402,11 @@
 	                            this.props.dataArticles.length,
 	                            ' items) '
 	                        ),
-	                        _react2.default.createElement(
+	                        this.props.dataArticles.length > 5 ? _react2.default.createElement(
 	                            'button',
 	                            { type: 'button', className: 'btn btn-default' },
 	                            'View All'
-	                        )
+	                        ) : null
 	                    ),
 	                    _react2.default.createElement(
 	                        'ul',
@@ -475,11 +472,6 @@
 	    (0, _createClass3.default)(SearchResultCategoryLeft, [{
 	        key: 'render',
 	        value: function render() {
-	            var HTML_Button_ViewAll = _react2.default.createElement(
-	                'button',
-	                { type: 'button', className: 'btn btn-default' },
-	                'View All'
-	            );
 	            var HTML_Div_Category_Name = [];
 	            // Object.keys(this.props.dataCategory).length - 1 / - Articles
 	            for (var iterator = 0, lenCategory = (0, _keys2.default)(this.props.dataCategory).length - 1; iterator < lenCategory; iterator++) {
@@ -498,7 +490,11 @@
 	                            this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length,
 	                            ' items)'
 	                        ),
-	                        this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length > 5 ? HTML_Button_ViewAll : null
+	                        this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length > 5 ? _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'btn btn-default' },
+	                            'View All'
+	                        ) : null
 	                    ),
 	                    _react2.default.createElement(ListGroupItem, { dataListName: this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]] })
 	                ));
@@ -506,7 +502,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { id: 'category_left', className: 'col-md-6 com-sm-6  ' },
+	                { id: 'category_left', className: 'col-sm-6 col-md-6 col-lg-6 ' },
 	                HTML_Div_Category_Name
 	            );
 	        }
@@ -533,7 +529,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 col-sm-12 col-lg-12 category ' },
+	                { className: 'col-sm-12 col-md-12 col-lg-12 category ' },
 	                _react2.default.createElement(SearchResultCategoryLeft, { dataCategory: this.props.category }),
 	                _react2.default.createElement(SearchResultCategoryRight, { dataArticles: this.props.category.Article })
 	            );
@@ -572,15 +568,20 @@
 	    }
 
 	    (0, _createClass3.default)(App, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            //document.getElementById('category_left');
-
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate() {
+	            // in order to height 'category_right' === height parent element
+	            if (document.getElementById("category_left")) {
+	                if (document.getElementById("category_left").clientHeight > document.getElementById("category_right").clientHeight) {
+	                    document.getElementById("category_right").style.height = document.getElementById("category_left").clientHeight + 'px';
+	                }
+	            }
+	            //        console.log(document.getElementById("category_left").clientHeight);
 	        }
 	    }, {
 	        key: 'handelClickButtonSearch',
 	        value: function handelClickButtonSearch() {
-
+	            // empty
 	            //let textInput = document.getElementById('search-text').value;
 
 	        }
@@ -592,11 +593,23 @@
 	            this.state.textInput = event.target.value;
 	            this.setState({ textInput: this.state.textInput });
 
-	            // min 3 char
-	            if (this.state.textInput.length > 2) {
+	            // search function
+	            var searchTextInData = function searchTextInData(text) {
 
-	                var searchTextInData = function searchTextInData(text) {
+	                _this7.setState({
+	                    data: {
+	                        category: {
+	                            Theme: _this7.state.data.category.Theme.splice(0),
+	                            Group: _this7.state.data.category.Group.splice(0),
+	                            Issue: _this7.state.data.category.Issue.splice(0),
+	                            Searches: _this7.state.data.category.Searches.splice(0),
+	                            Article: _this7.state.data.category.Article.splice(0)
+	                        }
+	                    }
 
+	                });
+	                // min 3 char
+	                if (_this7.state.textInput.length > 2) {
 	                    var textLowerCase = text.toLowerCase();
 
 	                    for (var iteratorDefault = 0, lenDATA = (0, _keys2.default)(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
@@ -681,48 +694,37 @@
 	                            }
 	                        }
 	                    }
+	                }
 
-	                    _this7.setState({
-	                        data: _this7.state.data
-	                    });
-	                };
-
-	                searchTextInData(this.state.textInput);
-	            } else {
-
-	                this.state.data.category.Theme.splice(0);
-	                this.state.data.category.Group.splice(0);
-	                this.state.data.category.Issue.splice(0);
-	                this.state.data.category.Searches.splice(0);
-	                this.state.data.category.Article.splice(0);
-
-	                this.setState({
-	                    data: {
-	                        category: {
-	                            Theme: this.state.data.category.Theme,
-	                            Group: this.state.data.category.Group,
-	                            Issue: this.state.data.category.Issue,
-	                            Searches: this.state.data.category.Searches,
-	                            Article: this.state.data.category.Article
-	                        }
-	                    }
-
+	                _this7.setState({
+	                    data: _this7.state.data
 	                });
-	                console.log(this.state.data.category);
-	            }
+	            };
+
+	            searchTextInData(this.state.textInput);
+
+	            /* this.setState({
+	             data: {
+	             category: {
+	             Theme: [],
+	             Group: [],
+	             Issue: [],
+	             Searches: [],
+	             Article: []
+	             }
+	             }
+	              });*/
+	            //console.log(this.state.data.category);
+
+	            console.log(this.state.data.category);
 	        }
-	    }, {
-	        key: 'handleClickButtonViewAll',
-	        value: function handleClickButtonViewAll() {}
 	    }, {
 	        key: 'render',
 	        value: function render() {
 
 	            var HTML_SearchResultView = void 0;
 	            if (this.state.textInput.length > 2) {
-	                HTML_SearchResultView = _react2.default.createElement(SearchResultView, { category: this.state.data.category,
-	                    clickButtonViewAll: this.handleClickButtonViewAll
-	                });
+	                HTML_SearchResultView = _react2.default.createElement(SearchResultView, { category: this.state.data.category });
 	            }
 
 	            return _react2.default.createElement(
@@ -730,7 +732,7 @@
 	                { className: 'row' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-md-12 col-sm-12 col-lg-12 form_block' },
+	                    { className: 'col-sm-12 col-md-12 col-lg-12 form_block' },
 	                    _react2.default.createElement('input', { type: 'text', id: 'search-text', className: 'form-control ',
 	                        onChange: this.handleChangeInput.bind(this)
 
@@ -750,16 +752,6 @@
 	}(_react2.default.Component);
 	/********************** .end view root element ************************************/
 
-	App.propTypes = {
-	    // Example:
-	    //      title: React.PropTypes.string.isRequired,
-	    //      price: React.PropTypes.number.isRequired,
-	};
-	App.defaultProps = {
-	    // Example:
-	    //      title: defaultTitle
-	    //      price: defaultPrice
-	};
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
 
 	/*
