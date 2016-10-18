@@ -5,8 +5,7 @@
 
 int main(){
 
-printf("%i : %i", getuid(), getgid());
-
+printf("User: %i\nGroup: %i\n", getuid(), getgid());
 
 return 0;
 }
