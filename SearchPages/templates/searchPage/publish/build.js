@@ -621,7 +621,11 @@
 	            var _this7 = this;
 
 	            this.state.textInput = event.target.value;
-	            this.setState({ textInput: this.state.textInput });
+
+	            this.setState({
+	                textInput: this.state.textInput,
+	                idElementKeyDownChoice: -1
+	            });
 
 	            // search function
 	            var searchTextInData = function searchTextInData(text) {

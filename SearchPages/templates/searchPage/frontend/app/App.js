@@ -748,7 +748,11 @@ class App extends React.Component {
     handleChangeInput(event) {
 
         this.state.textInput = event.target.value;
-        this.setState({textInput: this.state.textInput});
+
+        this.setState({
+            textInput: this.state.textInput,
+            idElementKeyDownChoice: -1
+        });
 
 
 // search function
