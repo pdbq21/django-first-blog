@@ -563,7 +563,7 @@
 	            },
 	            textInput: '',
 	            //data: {}
-	            idElementKeyDown: -1
+	            idElementKeyDownChoice: -1
 
 	        };
 	        return _this6;
@@ -748,36 +748,36 @@
 	                var moveUpOrDown = function moveUpOrDown(key) {
 
 	                    var lengthAllElementButton = document.querySelectorAll('.category .btn , .media-heading').length - 1;
-
-	                    if (_this8.state.idElementKeyDown !== -1) {
-
-	                        document.querySelectorAll('.category .btn , .media-heading')[_this8.state.idElementKeyDown].id = '';
+	                    // idElementKeyDownChoice = -1  is default value
+	                    if (_this8.state.idElementKeyDownChoice !== -1) {
+	                        // remove id old choice
+	                        document.querySelectorAll('.category .btn, .media-heading')[_this8.state.idElementKeyDownChoice].id = '';
 	                    }
 
 	                    if (key === 40) {
 
-	                        if (_this8.state.idElementKeyDown === lengthAllElementButton) {
-	                            _this8.state.idElementKeyDown = 0;
+	                        if (_this8.state.idElementKeyDownChoice === lengthAllElementButton) {
+	                            _this8.state.idElementKeyDownChoice = 0;
 	                        } else {
-	                            _this8.state.idElementKeyDown++;
+	                            _this8.state.idElementKeyDownChoice++;
 	                        }
 	                    } else {
 
-	                        if (_this8.state.idElementKeyDown === 0) {
-	                            _this8.state.idElementKeyDown = lengthAllElementButton;
+	                        if (_this8.state.idElementKeyDownChoice === 0) {
+	                            _this8.state.idElementKeyDownChoice = lengthAllElementButton;
 	                        } else {
-	                            _this8.state.idElementKeyDown--;
+	                            _this8.state.idElementKeyDownChoice--;
 	                        }
 	                    }
 
 	                    _this8.setState({
-	                        idElementKeyDown: _this8.state.idElementKeyDown
+	                        idElementKeyDownChoice: _this8.state.idElementKeyDownChoice
 	                    });
-	                    document.querySelectorAll('.category .btn , .media-heading')[_this8.state.idElementKeyDown].id = 'active-button';
+	                    document.querySelectorAll('.category .btn , .media-heading')[_this8.state.idElementKeyDownChoice].id = 'active-button';
 	                };
 
+	                // Enter key
 	                if (key === 13) {
-	                    // Enter key
 	                    //event.preventDefault();
 
 	                    console.log(document.getElementById('active-button'));

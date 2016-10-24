@@ -696,7 +696,7 @@ class App extends React.Component {
             },
             textInput: '',
 //data: {}
-            idElementKeyDown: -1
+            idElementKeyDownChoice: -1
 
         }
     }
@@ -901,40 +901,39 @@ class App extends React.Component {
             const moveUpOrDown = (key) => {
 
                 let lengthAllElementButton = document.querySelectorAll('.category .btn , .media-heading').length - 1;
-
-                if (this.state.idElementKeyDown !== -1) {
-
-                    document.querySelectorAll('.category .btn , .media-heading')[this.state.idElementKeyDown].id = '';
+// idElementKeyDownChoice = -1  is default value
+                if (this.state.idElementKeyDownChoice !== -1) {
+// remove id old choice
+                    document.querySelectorAll('.category .btn, .media-heading')[this.state.idElementKeyDownChoice].id = '';
                 }
 
                 if (key === 40) {
 
-                    if (this.state.idElementKeyDown === lengthAllElementButton) {
-                        this.state.idElementKeyDown = 0;
+                    if (this.state.idElementKeyDownChoice === lengthAllElementButton) {
+                        this.state.idElementKeyDownChoice = 0;
                     } else {
-                        this.state.idElementKeyDown++;
+                        this.state.idElementKeyDownChoice++;
                     }
-
 
                 } else {
 
-                    if (this.state.idElementKeyDown === 0) {
-                        this.state.idElementKeyDown = lengthAllElementButton;
+                    if (this.state.idElementKeyDownChoice === 0) {
+                        this.state.idElementKeyDownChoice = lengthAllElementButton;
                     } else {
-                        this.state.idElementKeyDown--;
+                        this.state.idElementKeyDownChoice--;
                     }
 
                 }
 
                 this.setState({
-                    idElementKeyDown: this.state.idElementKeyDown
+                    idElementKeyDownChoice: this.state.idElementKeyDownChoice
                 });
-                document.querySelectorAll('.category .btn , .media-heading')[this.state.idElementKeyDown].id = 'active-button';
+                document.querySelectorAll('.category .btn , .media-heading')[this.state.idElementKeyDownChoice].id = 'active-button';
 
             };
 
-
-            if (key === 13) {   // Enter key
+// Enter key
+            if (key === 13) {
                 //event.preventDefault();
 
                 console.log(document.getElementById('active-button'));
@@ -943,7 +942,6 @@ class App extends React.Component {
                 // key === 40 or 38
                 moveUpOrDown(key);
             }
-
 
         }
 
