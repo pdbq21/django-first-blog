@@ -1,14 +1,14 @@
 /**
  * Created by ruslan on 06.10.16.
  */
-import React, { Component } from 'react'
+import React, { PropTypes, Component } from 'react'
 //import ReactDOM from 'react-dom'
 
 class App extends Component{
 
     render(){
 
-        const { HTML_ListTag } = this.props;
+        const { tags } = this.props;
 
         return (
           <div id='menu-block'>
@@ -17,7 +17,7 @@ class App extends Component{
                   <input type="text"/>
                   <button type="button" id="search">Search</button>
               </form>
-              {HTML_ListTag}
+              {/*tags*/}
           </div>
         );
     }

@@ -5,6 +5,9 @@ body, html{
 #root{
     margin-top: 2em;
 }
+#root .row{
+    position: relative;
+}
 
 #root .row .form_block{
     display: inline-flex;
@@ -12,6 +15,11 @@ body, html{
     padding-left: 0px;
 }
 .category{
+
+    position: absolute;
+    top: 34px;
+background-color: white;
+
     border: 1px solid #ddd;
     display: block;
     padding-left: 0px;
@@ -93,4 +101,13 @@ height:100%;
 #category_left .category_name:first-child p, #category_right .category_name:first-child p{
 border-top-width: 0px;
     border-bottom-width: 0px;
+}
+#lorem{
+    height: 700px;
+    background-color: #00AA88;
+    margin-left: -1em;
+    margin-right: -1em;
+}
+#active-button{
+    border: 1px solid black;
 }

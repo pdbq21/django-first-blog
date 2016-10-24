@@ -354,7 +354,7 @@
 	                        { className: 'media-body' },
 	                        _react2.default.createElement(
 	                            'h4',
-	                            { className: 'media-heading' },
+	                            { className: 'media-heading', id: '' },
 	                            this.props.dataListArticles.Title
 	                        ),
 	                        this.props.dataListArticles.Body.substring(0, 100) + '...'
@@ -404,7 +404,7 @@
 	                        ),
 	                        this.props.dataArticles.length > 5 ? _react2.default.createElement(
 	                            'button',
-	                            { type: 'button', className: 'btn btn-default' },
+	                            { type: 'button', className: 'btn btn-default', id: '' },
 	                            'View All'
 	                        ) : null
 	                    ),
@@ -446,7 +446,7 @@
 	                    this.props.dataListName[iterator].Name.length > 45 ? this.props.dataListName[iterator].Name.substring(0, 45) + '...' : this.props.dataListName[iterator].Name,
 	                    _react2.default.createElement(
 	                        'button',
-	                        { type: 'button', className: 'btn btn-default btn-xs' },
+	                        { type: 'button', className: 'btn btn-default btn-xs', id: '' },
 	                        'View'
 	                    )
 	                ));
@@ -529,7 +529,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'col-sm-12 col-md-12 col-lg-12 category ' },
+	                { className: 'col-sm-12 col-md-12 col-lg-12 category ', id: 'category' },
 	                _react2.default.createElement(SearchResultCategoryLeft, { dataCategory: this.props.category }),
 	                _react2.default.createElement(SearchResultCategoryRight, { dataArticles: this.props.category.Article })
 	            );
@@ -561,19 +561,49 @@
 	                    Article: []
 	                }
 	            },
-	            textInput: ''
+	            textInput: '',
 	            //data: {}
+	            idElementKeyDown: -1
+
 	        };
 	        return _this6;
 	    }
 
 	    (0, _createClass3.default)(App, [{
+	        key: 'hideElement',
+	        value: function hideElement(event) {
+	            if (!event.target.matches('#category, #category *') && !event.target.matches('#search-text')) {
+
+	                document.getElementById('category').style.display = 'none';
+	            }
+	        }
+	    }, {
+	        key: 'handleKeyDownEsc',
+	        value: function handleKeyDownEsc(event) {
+
+	            if (event.keyCode === 27) {
+
+	                document.getElementById('category').style.display = 'none';
+	            }
+	        }
+	    }, {
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            // if click outside or key press 'Esc' hide category
+	            document.addEventListener("click", this.hideElement, false);
+	            document.addEventListener("keydown", this.handleKeyDownEsc, false);
+	        }
+	    }, {
 	        key: 'componentDidUpdate',
 	        value: function componentDidUpdate() {
 	            // in order to height 'category_right' === height parent element
 	            if (document.getElementById("category_left")) {
 	                if (document.getElementById("category_left").clientHeight > document.getElementById("category_right").clientHeight) {
 	                    document.getElementById("category_right").style.height = document.getElementById("category_left").clientHeight + 'px';
+	                }
+	                // show element id 'category'
+	                if (document.getElementById('category').style.display === 'none') {
+	                    document.getElementById('category').style.display = 'block';
 	                }
 	            }
 	            //        console.log(document.getElementById("category_left").clientHeight);
@@ -702,21 +732,61 @@
 	            };
 
 	            searchTextInData(this.state.textInput);
+	        }
+	    }, {
+	        key: 'handleKeyDown',
+	        value: function handleKeyDown(event) {
+	            var _this8 = this;
 
-	            /* this.setState({
-	             data: {
-	             category: {
-	             Theme: [],
-	             Group: [],
-	             Issue: [],
-	             Searches: [],
-	             Article: []
-	             }
-	             }
-	              });*/
-	            //console.log(this.state.data.category);
+	            // Up - 38 ; Down - 40;
 
-	            console.log(this.state.data.category);
+	            if (!(this.state.textInput.length > 2)) return;
+	            var key = event.keyCode;
+
+	            if (key !== 40 && key !== 38 && key !== 13) return;else {
+
+	                var moveUpOrDown = function moveUpOrDown(key) {
+
+	                    var lengthAllElementButton = document.querySelectorAll('.category .btn , .media-heading').length - 1;
+
+	                    if (_this8.state.idElementKeyDown !== -1) {
+
+	                        document.querySelectorAll('.category .btn , .media-heading')[_this8.state.idElementKeyDown].id = '';
+	                    }
+
+	                    if (key === 40) {
+
+	                        if (_this8.state.idElementKeyDown === lengthAllElementButton) {
+	                            _this8.state.idElementKeyDown = 0;
+	                        } else {
+	                            _this8.state.idElementKeyDown++;
+	                        }
+	                    } else {
+
+	                        if (_this8.state.idElementKeyDown === 0) {
+	                            _this8.state.idElementKeyDown = lengthAllElementButton;
+	                        } else {
+	                            _this8.state.idElementKeyDown--;
+	                        }
+	                    }
+
+	                    _this8.setState({
+	                        idElementKeyDown: _this8.state.idElementKeyDown
+	                    });
+	                    document.querySelectorAll('.category .btn , .media-heading')[_this8.state.idElementKeyDown].id = 'active-button';
+	                };
+
+	                if (key === 13) {
+	                    // Enter key
+	                    //event.preventDefault();
+
+	                    console.log(document.getElementById('active-button'));
+	                    document.getElementById('active-button').click();
+	                } else {
+	                    // key === 40 or 38
+	                    moveUpOrDown(key);
+	                }
+	            }
 	        }
 	    }, {
 	        key: 'render',
@@ -729,22 +799,29 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'row' },
+	                { className: 'container' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-sm-12 col-md-12 col-lg-12 form_block' },
-	                    _react2.default.createElement('input', { type: 'text', id: 'search-text', className: 'form-control ',
-	                        onChange: this.handleChangeInput.bind(this)
-
-	                    }),
+	                    { className: 'row' },
 	                    _react2.default.createElement(
-	                        'button',
-	                        { type: 'button', className: 'btn btn-default search ',
-	                            onClick: this.handelClickButtonSearch.bind(this) },
-	                        'Search'
-	                    )
+	                        'div',
+	                        { className: 'col-sm-12 col-md-12 col-lg-12 form_block',
+	                            onKeyDown: this.handleKeyDown.bind(this)
+	                        },
+	                        _react2.default.createElement('input', { type: 'text', id: 'search-text', className: 'form-control ',
+	                            onChange: this.handleChangeInput.bind(this)
+
+	                        }),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'btn btn-default search ',
+	                                onClick: this.handelClickButtonSearch.bind(this) },
+	                            'Search'
+	                        )
+	                    ),
+	                    HTML_SearchResultView
 	                ),
-	                HTML_SearchResultView
+	                _react2.default.createElement('div', { id: 'lorem' })
 	            );
 	        }
 	    }]);

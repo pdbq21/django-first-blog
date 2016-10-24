@@ -4,7 +4,7 @@ body{
 #root-select-menu{
     width: 100%;
     height: 200px;
-    background-color: #00AA88;
+    background-color: #a5a5a5;
 }
 
 #menu-block{
@@ -28,12 +28,12 @@ border: none;
 }
 
 #clear{
-    background-color: #0D3349;
-    color: #00CCFF;
+   /* background-color: #0D3349;
+    color: #00CCFF;*/
 }
 
 #search{
-    background-color: tomato;
-    color: #563d7c;
+   /* background-color: tomato;
+    color: #563d7c;*/
 
 }

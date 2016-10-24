@@ -539,7 +539,7 @@ class ListArticlesItem extends React.Component {
                         </a>
                     </div>
                     <div className="media-body">
-                        <h4 className="media-heading">{this.props.dataListArticles.Title}</h4>
+                        <h4 className="media-heading" id="">{this.props.dataListArticles.Title}</h4>
                         {/* max lenght string 100 char */}
                         {this.props.dataListArticles.Body.substring(0, 100) + '...'}
                     </div>
@@ -571,7 +571,7 @@ class SearchResultCategoryRight extends React.Component {
                     <p className="list-group-item"><span>Articles (Found {this.props.dataArticles.length} items) </span>
                         {/* if items size is not > 5 button hide */}
                         {(this.props.dataArticles.length > 5) ?
-                            <button type="button" className="btn btn-default">View All</button> : null}
+                            <button type="button" className="btn btn-default" id="">View All</button> : null}
 
                     </p>
                     <ul className="">
@@ -602,7 +602,7 @@ class ListGroupItem extends React.Component {
                 {(this.props.dataListName[iterator].Name.length > 45) ?
                 this.props.dataListName[iterator].Name.substring(0, 45) + '...' :
                     this.props.dataListName[iterator].Name}
-                <button type="button" className="btn btn-default btn-xs">View</button>
+                <button type="button" className="btn btn-default btn-xs" id="">View</button>
             </li>)
         }
         return (
@@ -662,7 +662,7 @@ class SearchResultView extends React.Component {
     render() {
 
         return (
-            <div className="col-sm-12 col-md-12 col-lg-12 category ">
+            <div className="col-sm-12 col-md-12 col-lg-12 category " id="category">
 
                 {/* 1. element category left*/}
                 <SearchResultCategoryLeft dataCategory={this.props.category}/>
@@ -694,10 +694,35 @@ class App extends React.Component {
                     Article: []
                 }
             },
-            textInput: ''
+            textInput: '',
 //data: {}
+            idElementKeyDown: -1
+
         }
     }
+
+    hideElement(event) {
+        if (!event.target.matches('#category, #category *') && !event.target.matches('#search-text')) {
+
+            document.getElementById('category').style.display = 'none';
+        }
+    }
+
+    handleKeyDownEsc(event) {
+
+        if (event.keyCode === 27) {
+
+            document.getElementById('category').style.display = 'none';
+        }
+
+    }
+
+    componentWillMount() {
+        // if click outside or key press 'Esc' hide category
+        document.addEventListener("click", this.hideElement, false);
+        document.addEventListener("keydown", this.handleKeyDownEsc, false);
+    }
+
 
     componentDidUpdate() {
         // in order to height 'category_right' === height parent element
@@ -705,8 +730,10 @@ class App extends React.Component {
             if (document.getElementById("category_left").clientHeight > document.getElementById("category_right").clientHeight) {
                 document.getElementById("category_right").style.height = document.getElementById("category_left").clientHeight + 'px';
             }
-
-
+// show element id 'category'
+            if (document.getElementById('category').style.display === 'none') {
+                document.getElementById('category').style.display = 'block';
+            }
         }
 //        console.log(document.getElementById("category_left").clientHeight);
     }
@@ -719,7 +746,6 @@ class App extends React.Component {
 
 
     handleChangeInput(event) {
-
 
         this.state.textInput = event.target.value;
         this.setState({textInput: this.state.textInput});
@@ -855,54 +881,112 @@ class App extends React.Component {
                 data: this.state.data
             });
 
+
         };
 
         searchTextInData(this.state.textInput);
 
-
-        /* this.setState({
-         data: {
-         category: {
-         Theme: [],
-         Group: [],
-         Issue: [],
-         Searches: [],
-         Article: []
-         }
-         }
-
-         });*/
-        //console.log(this.state.data.category);
-
-        console.log(this.state.data.category);
     }
+
+
+    handleKeyDown(event) {
+// Up - 38 ; Down - 40;
+
+        if (!(this.state.textInput.length > 2)) return;
+        var key = event.keyCode;
+
+        if (key !== 40 && key !== 38 && key !== 13) return;
+        else {
+
+            const moveUpOrDown = (key) => {
+
+                let lengthAllElementButton = document.querySelectorAll('.category .btn , .media-heading').length - 1;
+
+                if (this.state.idElementKeyDown !== -1) {
+
+                    document.querySelectorAll('.category .btn , .media-heading')[this.state.idElementKeyDown].id = '';
+                }
+
+                if (key === 40) {
+
+                    if (this.state.idElementKeyDown === lengthAllElementButton) {
+                        this.state.idElementKeyDown = 0;
+                    } else {
+                        this.state.idElementKeyDown++;
+                    }
+
+
+                } else {
+
+                    if (this.state.idElementKeyDown === 0) {
+                        this.state.idElementKeyDown = lengthAllElementButton;
+                    } else {
+                        this.state.idElementKeyDown--;
+                    }
+
+                }
+
+                this.setState({
+                    idElementKeyDown: this.state.idElementKeyDown
+                });
+                document.querySelectorAll('.category .btn , .media-heading')[this.state.idElementKeyDown].id = 'active-button';
+
+            };
+
+
+            if (key === 13) {   // Enter key
+                //event.preventDefault();
+
+                console.log(document.getElementById('active-button'));
+                document.getElementById('active-button').click();
+            } else {
+                // key === 40 or 38
+                moveUpOrDown(key);
+            }
+
+
+        }
+
+    }
+
 
     render() {
 
         let HTML_SearchResultView;
         if (this.state.textInput.length > 2) {
             HTML_SearchResultView = <SearchResultView category={this.state.data.category}/>;
+
         }
 
         return (
-            <div className="row">
+            <div className="container">
 
-                <div className="col-sm-12 col-md-12 col-lg-12 form_block">
+                <div className="row">
 
-                    <input type="text" id="search-text" className="form-control "
-                           onChange={this.handleChangeInput.bind(this)}
+                    <div className="col-sm-12 col-md-12 col-lg-12 form_block"
+                         onKeyDown={this.handleKeyDown.bind(this)}
+                    >
 
-                    />
+                        <input type="text" id="search-text" className="form-control "
+                               onChange={this.handleChangeInput.bind(this)}
 
-                    <button type="button" className="btn btn-default search "
-                            onClick={this.handelClickButtonSearch.bind(this)}>Search
-                    </button>
+                        />
+
+                        <button type="button" className="btn btn-default search "
+                                onClick={this.handelClickButtonSearch.bind(this)}>Search
+                        </button>
+
+                    </div>
+
+                    {/* 1. view search result */}
+                    {HTML_SearchResultView}
+                    {/* end 1. */}
+
 
                 </div>
+                <div id="lorem">
 
-                {/* 1. view search result */}
-                {HTML_SearchResultView}
-                {/* end 1. */}
+                </div>
             </div>
         );
     }

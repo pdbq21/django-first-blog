@@ -4,6 +4,7 @@
 import { createStore } from 'redux' // add applyMiddleware for use middleware
 import rootReducer from '../reducers/rootReducer'
 
+
 export default function configureStore(initialState) {
 
     const store = createStore(

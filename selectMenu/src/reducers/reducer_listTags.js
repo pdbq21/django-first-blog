@@ -18,15 +18,21 @@ const initialState = {
     function(state = {text: ''}, action)
  */
 
+const initialState = {
+    text: ''
+};
 
-function listTags(state = {text: ''}, action) {
+
+function listTags(state = initialState/* or {text: ''}*/, action) {
 
     if (action.type === ADD_TAGS) {
-        return [
+        return { ...state, text: action.payload};
+// or
+        /*[
             ...state, {
                 text: action.payload
             }
-        ]
+        ]*/
     }
     else if (action.type === DELETE_TAG) {
         return state.map((tag, index) => {

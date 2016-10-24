@@ -58,42 +58,31 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _configureStore = __webpack_require__(277);
+	var _configureStore = __webpack_require__(273);
 
 	var _configureStore2 = _interopRequireDefault(_configureStore);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var store = (0, _configureStore2.default)();
-	/*
-	 class App extends Component{
+	var store = (0, _configureStore2.default)(); /**
+	                                              * Created by ruslan on 04.10.16.
+	                                              */
 
-	 render(){
-	 return (
-	 <div id='menu-block'>
-	 <form action="">
-	 <button type="button" id="clear">Clear</button>
-	 <input type="text"/>
-	 <button type="button" id="search">Search</button>
-	 </form>
-	 </div>
-	 );
-	 }
-	 }
-	 */
 
-	/**
-	 * Created by ruslan on 06.10.16.
-	 */
 	(0, _reactDom.render)(_react2.default.createElement(
 	    _reactRedux.Provider,
 	    { store: store },
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'App' },
-	        _react2.default.createElement(_App2.default, null)
-	    )
-	), document.getElementById('root-select-menu'));
+	    _react2.default.createElement(_App2.default, null)
+	), document.getElementById('root'));
+
+	/*
+	Note:
+	    ? <Provider />:
+	    ? store
+	    ? configureStore
+
+
+	 */
 
 /***/ },
 /* 1 */
@@ -22086,32 +22075,11 @@
 
 	var _reactRedux = __webpack_require__(163);
 
-	var _redux = __webpack_require__(170);
-
-	var _Header = __webpack_require__(273);
-
-	var _Header2 = _interopRequireDefault(_Header);
-
-	var _Main = __webpack_require__(274);
-
-	var _Main2 = _interopRequireDefault(_Main);
-
-	var _Footer = __webpack_require__(275);
-
-	var _Footer2 = _interopRequireDefault(_Footer);
-
-	var _actions = __webpack_require__(276);
-
-	var ActionsList = _interopRequireWildcard(_actions);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// components
-
-
-	//??? 1-2 down
+	/**
+	 * Created by ruslan on 04.10.16.
+	 */
 	var App = function (_Component) {
 	    (0, _inherits3.default)(App, _Component);
 
@@ -22123,48 +22091,31 @@
 	    (0, _createClass3.default)(App, [{
 	        key: 'render',
 	        value: function render() {
-	            //const { text } = this.props;
-	            // const { actions } = this.props.ActionsList;
-	            console.log(this.props);
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                _react2.default.createElement(_Header2.default, { addTag: 3 /*actions*/ }),
-	                _react2.default.createElement(_Main2.default, { listTags: 1 /*text*/, deleteTag: 2 /*actions*/ }),
-	                _react2.default.createElement(_Footer2.default, null)
+	                { className: '' },
+	                'App create ',
+	                this.props.user,
+	                '!'
 	            );
 	        }
 	    }]);
 	    return App;
 	}(_react.Component);
 
-	/*const App = ({tags, actions}) => (
-	    <div>
-	        <Header addTag={actions.clickButton}/>
-	        <Main listTags={tags} deleteTag={actions.clickDeleteTag}/>
-	        {/!* need add length tags #*!/}
-	        <Footer />
-	    </div>
-	);*/
-
-	// give props a state from Store
-	/**
-	 * Created by ruslan on 06.10.16.
-	 */
-
-
-	var mapStateToProps = function mapStateToProps(state) {
-	    console.log(undefined);
-	    return { text: state.text };
-	};
-
-	var mapDispachToProps = function mapDispachToProps(dispatch) {
+	function mapStateToProps(state) {
 	    return {
-	        ActionsList: (0, _redux.bindActionCreators)(ActionsList, dispatch)
+	        user: state.user
 	    };
-	};
+	}
 
-	exports.default = (0, _reactRedux.connect)(mapStateToProps(), mapDispachToProps())(App);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(App);
+
+	/*
+	Note:
+	    ? connect
+	    ?
+	 */
 
 /***/ },
 /* 187 */
@@ -23705,493 +23656,60 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.default = configureStore;
 
-	var _getPrototypeOf = __webpack_require__(187);
+	var _redux = __webpack_require__(170);
 
-	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+	var _reducers = __webpack_require__(274);
 
-	var _classCallCheck2 = __webpack_require__(213);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(214);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(218);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(265);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
+	var _reducers2 = _interopRequireDefault(_reducers);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//import ReactDOM from 'react-dom'
+	/**
+	 * Created by ruslan on 04.10.16.
+	 */
+	function configureStore(initialState) {
+	    var store = (0, _redux.createStore)(_reducers2.default, initialState);
 
-	var App = function (_Component) {
-	    (0, _inherits3.default)(App, _Component);
+	    return store;
+	}
 
-	    function App() {
-	        (0, _classCallCheck3.default)(this, App);
-	        return (0, _possibleConstructorReturn3.default)(this, (App.__proto__ || (0, _getPrototypeOf2.default)(App)).apply(this, arguments));
-	    }
-
-	    (0, _createClass3.default)(App, [{
-	        key: 'render',
-	        value: function render() {
-	            var tags = this.props.tags;
-
-
-	            return _react2.default.createElement(
-	                'div',
-	                { id: 'menu-block' },
-	                _react2.default.createElement(
-	                    'form',
-	                    { action: '' },
-	                    _react2.default.createElement(
-	                        'button',
-	                        { type: 'button', id: 'clear' },
-	                        'Clear'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'text' }),
-	                    _react2.default.createElement(
-	                        'button',
-	                        { type: 'button', id: 'search' },
-	                        'Search'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	    return App;
-	}(_react.Component); /**
-	                      * Created by ruslan on 06.10.16.
-	                      */
-
-
-	exports.default = App;
 	/*
-	ReactDOM.render(
-	    <App />, document.getElementById('root-select-menu')
-	);*/
+	Note:
+	    ? all imports
+	    ?
+	 */
+	//applyMiddleware
 
 /***/ },
 /* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _getPrototypeOf = __webpack_require__(187);
-
-	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-	var _classCallCheck2 = __webpack_require__(213);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(214);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(218);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(265);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Main = function (_Component) {
-	    (0, _inherits3.default)(Main, _Component);
-
-	    function Main() {
-	        (0, _classCallCheck3.default)(this, Main);
-	        return (0, _possibleConstructorReturn3.default)(this, (Main.__proto__ || (0, _getPrototypeOf2.default)(Main)).apply(this, arguments));
-	    }
-
-	    (0, _createClass3.default)(Main, [{
-	        key: "render",
-	        value: function render() {
-
-	            return _react2.default.createElement(
-	                "ul",
-	                null,
-	                _react2.default.createElement(
-	                    "li",
-	                    null,
-	                    _react2.default.createElement("span", { className: "text" }),
-	                    _react2.default.createElement(
-	                        "span",
-	                        { className: "deleteTag" },
-	                        "x"
-	                    )
-	                ),
-	                "..."
-	            );
-	        }
-	    }]);
-	    return Main;
-	}(_react.Component); /**
-	                      * Created by ruslan on 06.10.16.
-	                      */
-
-
-	exports.default = Main;
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _getPrototypeOf = __webpack_require__(187);
-
-	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-	var _classCallCheck2 = __webpack_require__(213);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _createClass2 = __webpack_require__(214);
-
-	var _createClass3 = _interopRequireDefault(_createClass2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(218);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(265);
-
-	var _inherits3 = _interopRequireDefault(_inherits2);
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Footer = function (_Component) {
-	    (0, _inherits3.default)(Footer, _Component);
-
-	    function Footer() {
-	        (0, _classCallCheck3.default)(this, Footer);
-	        return (0, _possibleConstructorReturn3.default)(this, (Footer.__proto__ || (0, _getPrototypeOf2.default)(Footer)).apply(this, arguments));
-	    }
-
-	    (0, _createClass3.default)(Footer, [{
-	        key: "render",
-	        value: function render() {
-
-	            return _react2.default.createElement(
-	                "div",
-	                { id: "footer" },
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Tags: ",
-	                    _react2.default.createElement(
-	                        "span",
-	                        null,
-	                        "#"
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	    return Footer;
-	}(_react.Component); /**
-	                      * Created by ruslan on 06.10.16.
-	                      */
-
-	exports.default = Footer;
-
-/***/ },
-/* 276 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	/**
-	 * Created by ruslan on 06.10.16.
-	 */
-	/*
-	* Note:
-	*   this write action (type name: 'UPPER_CASE')
-	*
-	* */
-
-	// constant type action
-	// need for import in Reducers
-
-	var ADD_TAGS = exports.ADD_TAGS = 'ADD_TAGS';
-	var DELETE_TAG = exports.DELETE_TAG = 'DELETE_TAG';
-	var DELETE_ALL_TAGS = exports.DELETE_ALL_TAGS = 'DELETE_ALL_TAGS';
-
-	// generators actions
-
-	var clickButton = exports.clickButton = function clickButton(text) {
-	  return {
-	    type: 'ADD_TAGS',
-	    payload: text
-	  };
-	};
-
-	var clickDeleteTag = exports.clickDeleteTag = function clickDeleteTag(id) {
-	  return {
-	    type: 'DELETE_TAG',
-	    payload: id
-	  };
-	};
-
-	var clickClear = exports.clickClear = function clickClear() {
-	  return {
-	    type: 'DELETE_ALL_TAGS'
-
-	  };
-	};
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = configureStore;
-
-	var _redux = __webpack_require__(170);
-
-	var _rootReducer = __webpack_require__(278);
-
-	var _rootReducer2 = _interopRequireDefault(_rootReducer);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	exports.default = userstate;
 	/**
-	 * Created by ruslan on 12.10.16.
+	 * Created by ruslan on 04.10.16.
 	 */
-	function configureStore(initialState) {
-
-	    var store = (0, _redux.createStore)(_rootReducer2.default, initialState
-	    // add middleware here.
-	    // example: applyMiddleware(first_middleware, second_middleware, ...)
-	    );
-
-	    return store;
-	} // add applyMiddleware for use middleware
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _redux = __webpack_require__(170);
-
-	var _reducer_listTags = __webpack_require__(279);
-
-	var _reducer_listTags2 = _interopRequireDefault(_reducer_listTags);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * Created by ruslan on 12.10.16.
-	 */
-	var rootReducer = (0, _redux.combineReducers)({
-	  listTags: _reducer_listTags2.default
-	  // add next reducers
-	});
-
-	exports.default = rootReducer;
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _assign = __webpack_require__(280);
-
-	var _assign2 = _interopRequireDefault(_assign);
-
-	var _extends2 = __webpack_require__(284);
-
-	var _extends3 = _interopRequireDefault(_extends2);
-
-	var _actions = __webpack_require__(276);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// initialSate:
-	// можна оголосити константою на початку або паметром по замовчуванню для кодного значення state;
-	/*
-	    Example:
-	const initialState = {
-	    text: ''
-	    };
-
-	    or
-
-	    function(state = {text: ''}, action)
-	 */
-
 	var initialState = {
-	    text: ''
-	}; /**
-	    * Created by ruslan on 07.10.16.
-	    */
-	// constant  names ActionTypes
+	    user: 'test user'
+	};
 
-
-	function listTags() {
+	function userstate() {
 	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-	    var /* or {text: ''}*/action = arguments[1];
 
-
-	    if (action.type === _actions.ADD_TAGS) {
-	        return (0, _extends3.default)({}, state, { text: action.payload });
-	        // or
-	        /*[
-	            ...state, {
-	                text: action.payload
-	            }
-	        ]*/
-	    } else if (action.type === _actions.DELETE_TAG) {
-	        return state.map(function (tag, index) {
-	            if (index === action.index) {
-	                return (0, _assign2.default)({}, tag, {
-	                    text: ''
-	                });
-	            }
-	            return tag;
-	        });
-	    } else {
-	        return state;
-	    }
+	    return state;
 	}
 
-	exports.default = listTags;
+	/*
+	Note:
+	    ? function userstate()
 
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(281), __esModule: true };
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(282);
-	module.exports = __webpack_require__(200).Object.assign;
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(199);
-
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(283)});
-
-/***/ },
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// 19.1.2.1 Object.assign(target, source, ...)
-	var getKeys  = __webpack_require__(232)
-	  , gOPS     = __webpack_require__(256)
-	  , pIE      = __webpack_require__(257)
-	  , toObject = __webpack_require__(190)
-	  , IObject  = __webpack_require__(235)
-	  , $assign  = Object.assign;
-
-	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = !$assign || __webpack_require__(209)(function(){
-	  var A = {}
-	    , B = {}
-	    , S = Symbol()
-	    , K = 'abcdefghijklmnopqrst';
-	  A[S] = 7;
-	  K.split('').forEach(function(k){ B[k] = k; });
-	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
-	  var T     = toObject(target)
-	    , aLen  = arguments.length
-	    , index = 1
-	    , getSymbols = gOPS.f
-	    , isEnum     = pIE.f;
-	  while(aLen > index){
-	    var S      = IObject(arguments[index++])
-	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
-	      , length = keys.length
-	      , j      = 0
-	      , key;
-	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-	  } return T;
-	} : $assign;
-
-/***/ },
-/* 284 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	exports.__esModule = true;
-
-	var _assign = __webpack_require__(280);
-
-	var _assign2 = _interopRequireDefault(_assign);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _assign2.default || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];
-
-	    for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }
-
-	  return target;
-	};
+	 */
 
 /***/ }
 /******/ ]);
