@@ -115,3 +115,11 @@ border-top-width: 0px;
 #active-button{
 
 }
+.category{
+    overflow: hidden;
+}
+.category #category_left, .category #category_right{
+    float: left;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+}

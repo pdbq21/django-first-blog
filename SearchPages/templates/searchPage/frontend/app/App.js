@@ -695,7 +695,7 @@ class App extends React.Component {
                 }
             },
             textInput: '',
-//data: {}
+
             idElementKeyDownChoice: -1
 
         }
@@ -731,17 +731,15 @@ class App extends React.Component {
 
 
     componentDidUpdate() {
-        // in order to height 'category_right' === height parent element
-        if (document.getElementById("category_left")) {
-            if (document.getElementById("category_left").clientHeight > document.getElementById("category_right").clientHeight) {
-                document.getElementById("category_right").style.height = document.getElementById("category_left").clientHeight + 'px';
-            }
+
+        if (document.getElementById("category")) {
+
 // show element id 'category'
             if (document.getElementById('category').style.display === 'none') {
                 document.getElementById('category').style.display = 'block';
+
             }
         }
-//        console.log(document.getElementById("category_left").clientHeight);
     }
 
     handelClickButtonSearch() {
