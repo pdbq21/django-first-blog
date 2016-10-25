@@ -108,6 +108,10 @@ border-top-width: 0px;
     margin-left: -1em;
     margin-right: -1em;
 }
+#active-item {
+
+    background-color: lightsteelblue;
+}
 #active-button{
-    border: 1px solid black;
+
 }

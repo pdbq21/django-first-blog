@@ -519,7 +519,7 @@ class ListArticlesItem extends React.Component {
 
         return (
 
-            <li className="list-group-item">
+            <li className="list-group-item" id="">
                 <div className="media">
                     <div className="media-left">
                         <a href="#">
@@ -597,7 +597,7 @@ class ListGroupItem extends React.Component {
 
         for (let iterator = 0; iterator < lenghtPropsDataListName; iterator++) {
 
-            HTML_Li_Items.push(<li className="list-group-item" key={iterator}>
+            HTML_Li_Items.push(<li className="list-group-item" key={iterator} id="">
                 {/* max lenght string is 45 char */}
                 {(this.props.dataListName[iterator].Name.length > 45) ?
                 this.props.dataListName[iterator].Name.substring(0, 45) + '...' :
@@ -904,11 +904,22 @@ class App extends React.Component {
 
             const moveUpOrDown = (key) => {
 
-                let lengthAllElementButton = document.querySelectorAll('.category .btn , .media-heading').length - 1;
+                // all items
+                let lengthAllElementButton = document.querySelectorAll('.category .list-group-item').length - 1;
+
+                // this 5 is lenght category without items
+                if (lengthAllElementButton < 5 ) return;
+
 // idElementKeyDownChoice = -1  is default value
                 if (this.state.idElementKeyDownChoice !== -1) {
-// remove id old choice
-                    document.querySelectorAll('.category .btn, .media-heading')[this.state.idElementKeyDownChoice].id = '';
+// delete id old choice
+
+                    // delete li id active *
+                    document.querySelectorAll('.category .list-group-item')[this.state.idElementKeyDownChoice].id = '';
+                    // delete button / h4 id active *
+                    if (document.getElementById('active-button')) {
+                        document.getElementById('active-button').id = '';
+                    }
                 }
 
                 if (key === 40) {
@@ -932,7 +943,17 @@ class App extends React.Component {
                 this.setState({
                     idElementKeyDownChoice: this.state.idElementKeyDownChoice
                 });
-                document.querySelectorAll('.category .btn , .media-heading')[this.state.idElementKeyDownChoice].id = 'active-button';
+// if there is button 'view all' or div class='media'
+                if (document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes.length > 1 ||
+                    document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
+// add id element li
+                    document.querySelectorAll('.category .list-group-item')[this.state.idElementKeyDownChoice].id = 'active-item';
+                    // this document.querySelectorAll('')[0] find button
+                    document.querySelectorAll('#active-item .btn, #active-item .media-heading')[0].id = 'active-button';
+                }
+                else {
+                    moveUpOrDown(key);
+                }
 
             };
 

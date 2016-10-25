@@ -334,7 +334,7 @@
 
 	            return _react2.default.createElement(
 	                'li',
-	                { className: 'list-group-item' },
+	                { className: 'list-group-item', id: '' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'media' },
@@ -442,7 +442,7 @@
 
 	                HTML_Li_Items.push(_react2.default.createElement(
 	                    'li',
-	                    { className: 'list-group-item', key: iterator },
+	                    { className: 'list-group-item', key: iterator, id: '' },
 	                    this.props.dataListName[iterator].Name.length > 45 ? this.props.dataListName[iterator].Name.substring(0, 45) + '...' : this.props.dataListName[iterator].Name,
 	                    _react2.default.createElement(
 	                        'button',
@@ -748,48 +748,69 @@
 	            var key = event.keyCode;
 
 	            if (key !== 40 && key !== 38 && key !== 13) return;else {
+	                (function () {
 
-	                var moveUpOrDown = function moveUpOrDown(key) {
+	                    var moveUpOrDown = function moveUpOrDown(key) {
 
-	                    var lengthAllElementButton = document.querySelectorAll('.category .btn , .media-heading').length - 1;
-	                    // idElementKeyDownChoice = -1  is default value
-	                    if (_this8.state.idElementKeyDownChoice !== -1) {
-	                        // remove id old choice
-	                        document.querySelectorAll('.category .btn, .media-heading')[_this8.state.idElementKeyDownChoice].id = '';
-	                    }
+	                        // all items
+	                        var lengthAllElementButton = document.querySelectorAll('.category .list-group-item').length - 1;
 
-	                    if (key === 40) {
+	                        // this 5 is lenght category without items
+	                        if (lengthAllElementButton < 5) return;
 
-	                        if (_this8.state.idElementKeyDownChoice === lengthAllElementButton) {
-	                            _this8.state.idElementKeyDownChoice = 0;
-	                        } else {
-	                            _this8.state.idElementKeyDownChoice++;
+	                        // idElementKeyDownChoice = -1  is default value
+	                        if (_this8.state.idElementKeyDownChoice !== -1) {
+	                            // delete id old choice
+
+	                            // delete li id active *
+	                            document.querySelectorAll('.category .list-group-item')[_this8.state.idElementKeyDownChoice].id = '';
+	                            // delete button / h4 id active *
+	                            if (document.getElementById('active-button')) {
+	                                document.getElementById('active-button').id = '';
+	                            }
 	                        }
+
+	                        if (key === 40) {
+
+	                            if (_this8.state.idElementKeyDownChoice === lengthAllElementButton) {
+	                                _this8.state.idElementKeyDownChoice = 0;
+	                            } else {
+	                                _this8.state.idElementKeyDownChoice++;
+	                            }
+	                        } else {
+
+	                            if (_this8.state.idElementKeyDownChoice === 0) {
+	                                _this8.state.idElementKeyDownChoice = lengthAllElementButton;
+	                            } else {
+	                                _this8.state.idElementKeyDownChoice--;
+	                            }
+	                        }
+
+	                        _this8.setState({
+	                            idElementKeyDownChoice: _this8.state.idElementKeyDownChoice
+	                        });
+	                        // if there is button 'view all' or div class='media'
+	                        if (document.querySelectorAll('.category .list-group-item ')[_this8.state.idElementKeyDownChoice].childNodes.length > 1 || document.querySelectorAll('.category .list-group-item ')[_this8.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
+	                            // add id element li
+	                            document.querySelectorAll('.category .list-group-item')[_this8.state.idElementKeyDownChoice].id = 'active-item';
+	                            // this document.querySelectorAll('')[0] find button
+	                            document.querySelectorAll('#active-item .btn, #active-item .media-heading')[0].id = 'active-button';
+	                        } else {
+	                            moveUpOrDown(key);
+	                        }
+	                    };
+
+	                    // Enter key
+	                    if (key === 13) {
+	                        //event.preventDefault();
+
+	                        console.log(document.getElementById('active-button'));
+	                        document.getElementById('active-button').click();
 	                    } else {
-
-	                        if (_this8.state.idElementKeyDownChoice === 0) {
-	                            _this8.state.idElementKeyDownChoice = lengthAllElementButton;
-	                        } else {
-	                            _this8.state.idElementKeyDownChoice--;
-	                        }
+	                        // key === 40 or 38
+	                        moveUpOrDown(key);
 	                    }
-
-	                    _this8.setState({
-	                        idElementKeyDownChoice: _this8.state.idElementKeyDownChoice
-	                    });
-	                    document.querySelectorAll('.category .btn , .media-heading')[_this8.state.idElementKeyDownChoice].id = 'active-button';
-	                };
-
-	                // Enter key
-	                if (key === 13) {
-	                    //event.preventDefault();
-
-	                    console.log(document.getElementById('active-button'));
-	                    document.getElementById('active-button').click();
-	                } else {
-	                    // key === 40 or 38
-	                    moveUpOrDown(key);
-	                }
+	                })();
 	            }
 	        }
 	    }, {
