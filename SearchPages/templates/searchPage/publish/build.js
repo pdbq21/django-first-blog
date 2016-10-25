@@ -570,6 +570,13 @@
 	    }
 
 	    (0, _createClass3.default)(App, [{
+	        key: 'lenghtTextInput',
+	        value: function lenghtTextInput() {
+	            // this function to verify length textInput
+	            // min 3 chars
+	            return this.state.textInput.length > 2;
+	        }
+	    }, {
 	        key: 'hideElement',
 	        value: function hideElement(event) {
 	            if (!event.target.matches('#category, #category *') && !event.target.matches('#search-text')) {
@@ -643,7 +650,7 @@
 
 	                });
 	                // min 3 char
-	                if (_this7.state.textInput.length > 2) {
+	                if (_this7.lenghtTextInput()) {
 	                    var textLowerCase = text.toLowerCase();
 
 	                    for (var iteratorDefault = 0, lenDATA = (0, _keys2.default)(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
@@ -744,7 +751,8 @@
 
 	            // Up - 38 ; Down - 40;
 
-	            if (!(this.state.textInput.length > 2)) return;
+
+	            if (!this.lenghtTextInput()) return;
 	            var key = event.keyCode;
 
 	            if (key !== 40 && key !== 38 && key !== 13) return;else {
@@ -818,7 +826,8 @@
 	        value: function render() {
 
 	            var HTML_SearchResultView = void 0;
-	            if (this.state.textInput.length > 2) {
+	            // min 3 char
+	            if (this.lenghtTextInput()) {
 	                HTML_SearchResultView = _react2.default.createElement(SearchResultView, { category: this.state.data.category });
 	            }
 

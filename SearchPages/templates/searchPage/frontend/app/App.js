@@ -701,6 +701,12 @@ class App extends React.Component {
         }
     }
 
+    lenghtTextInput(){
+        // this function to verify length textInput
+// min 3 chars
+        return (this.state.textInput.length > 2);
+    }
+
     hideElement(event) {
         if (!event.target.matches('#category, #category *') && !event.target.matches('#search-text')) {
 
@@ -771,7 +777,7 @@ class App extends React.Component {
 
             });
 // min 3 char
-            if (this.state.textInput.length > 2) {
+            if (this.lenghtTextInput()) {
                 let textLowerCase = text.toLowerCase();
 
                 for (let iteratorDefault = 0, lenDATA = Object.keys(Data.category).length; iteratorDefault < lenDATA; iteratorDefault++) {
@@ -896,7 +902,8 @@ class App extends React.Component {
     handleKeyDown(event) {
 // Up - 38 ; Down - 40;
 
-        if (!(this.state.textInput.length > 2)) return;
+
+        if (!(this.lenghtTextInput())) return;
         var key = event.keyCode;
 
         if (key !== 40 && key !== 38 && key !== 13) return;
@@ -976,7 +983,8 @@ class App extends React.Component {
     render() {
 
         let HTML_SearchResultView;
-        if (this.state.textInput.length > 2) {
+        // min 3 char
+        if (this.lenghtTextInput()) {
             HTML_SearchResultView = <SearchResultView category={this.state.data.category}/>;
 
         }
