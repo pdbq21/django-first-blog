@@ -39,7 +39,7 @@ class App extends Component{
 
 // give props a state from Store
 const mapStateToProps = state => {
-    console.log(this);
+    console.log(state);
     return {text: state.text}
 };
 
