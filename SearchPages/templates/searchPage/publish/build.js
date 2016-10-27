@@ -488,7 +488,7 @@
 	                        { className: 'list-group-item' },
 	                        _react2.default.createElement(
 	                            'span',
-	                            { className: this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length > 5 ? 'showButton' : 'hideButton' },
+	                            null,
 	                            (0, _keys2.default)(this.props.dataCategory)[iterator],
 	                            ' ( Found ',
 	                            this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length,
@@ -759,13 +759,12 @@
 	                (function () {
 
 	                    var moveUpOrDown = function moveUpOrDown(key) {
-	                        console.log('enter');
-	                        // all items
-	                        console.log(document.querySelectorAll('.category .list-group-item, .form_block input'));
+
+	                        // all items length
 	                        var lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length - 1; // - 1;
 
-	                        // this 5 is lenght category without items
-	                        if (lengthAllElementButton < 5) return;
+	                        // this 5 is lenght category without items + 1 input
+	                        if (lengthAllElementButton < 6) return;
 
 	                        // idElementKeyDownChoice = -1  is default value
 	                        if (_this8.state.idElementKeyDownChoice !== -1 /*-1*/) {

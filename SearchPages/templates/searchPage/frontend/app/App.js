@@ -626,8 +626,7 @@ class SearchResultCategoryLeft extends React.Component {
 
             HTML_Div_Category_Name.push(<div className="category_name list-group">
                 <p className="list-group-item">
-                            <span className={(this.props.dataCategory[
-                        Object.keys(this.props.dataCategory)[iterator]].length > 5) ? 'showButton' : 'hideButton'}>
+                            <span>
                                 {Object.keys(this.props.dataCategory)[iterator]} (
                                 Found {this.props.dataCategory[
                                 Object.keys(this.props.dataCategory)[iterator]].length} items)
@@ -908,13 +907,12 @@ class App extends React.Component {
         else {
 
             const moveUpOrDown = (key) => {
-                console.log('enter');
-                // all items
-                console.log(document.querySelectorAll('.category .list-group-item, .form_block input'));
+
+                // all items length
                 let lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length-1;// - 1;
 
-                // this 5 is lenght category without items
-                if (lengthAllElementButton < 5) return;
+                // this 5 is lenght category without items + 1 input = 6
+                if (lengthAllElementButton < 6) return;
 
 // idElementKeyDownChoice = -1  is default value
                 if (this.state.idElementKeyDownChoice !== -1/*-1*/) {
