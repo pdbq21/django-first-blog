@@ -125,7 +125,7 @@ border-top-width: 0px;
 
 }
 #active-button:focus{
-    background-color: #563d7c;
+
     outline: none;
 }
 

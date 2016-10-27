@@ -698,7 +698,7 @@ class App extends React.Component {
             },
             textInput: '',
 
-            idElementKeyDownChoice: -1//-1
+            idElementKeyDownChoice: -1
 
         }
     }
@@ -908,36 +908,43 @@ class App extends React.Component {
 
             const moveUpOrDown = (key) => {
 
-                // all items length
-                let lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length-1;// - 1;
+// all items length
+                let lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length - 1;// - 1;
 
-                // this 5 is lenght category without items + 1 input = 6
+// this 5 is lenght category without items + 1 input = 6
                 if (lengthAllElementButton < 6) return;
 
 // idElementKeyDownChoice = -1  is default value
                 if (this.state.idElementKeyDownChoice !== -1/*-1*/) {
 // delete id old choice
 
-                    // delete li id active *
-                    console.log(this.state.idElementKeyDownChoice);
+                    // delete id active *
                     document.querySelectorAll('.category .list-group-item, .form_block')[this.state.idElementKeyDownChoice].id = '';
-                    // delete button / h4 id active *
+                    // delete button || h4 || input id active *
                     if (document.getElementById('active-button')) {
                         document.getElementById('active-button').id = '';
                     }
                 }
 
                 if (key === 40) {
-
-
+// if last => first
                     if (this.state.idElementKeyDownChoice === lengthAllElementButton) {
                         this.state.idElementKeyDownChoice = 0;
                     } else {
-                        this.state.idElementKeyDownChoice++;
+                        // skip if first is input
+                        // -1 is default state
+                        if (this.state.idElementKeyDownChoice === -1) {
+                            this.state.idElementKeyDownChoice = 1;
+                        } else {
+                            this.state.idElementKeyDownChoice++;
+                        }
+
+
                     }
 
                 } else {
-
+// if key === 38
+// if first => last
                     if (this.state.idElementKeyDownChoice === 0) {
                         this.state.idElementKeyDownChoice = lengthAllElementButton;
                     } else {
@@ -950,23 +957,18 @@ class App extends React.Component {
                     idElementKeyDownChoice: this.state.idElementKeyDownChoice
                 });
 
-                console.log(25);
 
-// if there is button 'view all' or div class='media'
-                console.log(this.state.idElementKeyDownChoice);
-                console.log(document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes.length !== 1);
-                if (
-                    /*document.querySelectorAll('.form_block')[this.state.idElementKeyDownChoice] !== undefined ||
-                    document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[1]
-                    ||
-                    document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'*/
-                document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes.length !== 1
-                || document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'
+// if there not is button 'view all' or div class='media'
+// if childNodes.length === 1 this element not have button 'View All'
+// childNodes.length === 0 this is input
+// childNodes.length === 4 this element have button 'View All'
+                if (document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes.length !== 1 ||
+                    document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'
                 ) {
 // add id element li
                     document.querySelectorAll('.category .list-group-item, .form_block')[this.state.idElementKeyDownChoice].id = 'active-item';
-                    // this document.querySelectorAll('')[0] find button
 
+// this document.querySelectorAll('')[0] find button
                     document.querySelectorAll('#active-item .btn, #active-item .media-heading, #active-item input')[0].id = 'active-button';
                 }
                 else {

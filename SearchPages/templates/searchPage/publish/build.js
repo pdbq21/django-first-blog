@@ -567,7 +567,7 @@
 	            },
 	            textInput: '',
 
-	            idElementKeyDownChoice: -1 //-1
+	            idElementKeyDownChoice: -1
 
 	        };
 	        return _this6;
@@ -763,31 +763,37 @@
 	                        // all items length
 	                        var lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length - 1; // - 1;
 
-	                        // this 5 is lenght category without items + 1 input
+	                        // this 5 is lenght category without items + 1 input = 6
 	                        if (lengthAllElementButton < 6) return;
 
 	                        // idElementKeyDownChoice = -1  is default value
 	                        if (_this8.state.idElementKeyDownChoice !== -1 /*-1*/) {
 	                                // delete id old choice
 
-	                                // delete li id active *
-	                                console.log(_this8.state.idElementKeyDownChoice);
+	                                // delete id active *
 	                                document.querySelectorAll('.category .list-group-item, .form_block')[_this8.state.idElementKeyDownChoice].id = '';
-	                                // delete button / h4 id active *
+	                                // delete button || h4 || input id active *
 	                                if (document.getElementById('active-button')) {
 	                                    document.getElementById('active-button').id = '';
 	                                }
 	                            }
 
 	                        if (key === 40) {
-
+	                            // if last => first
 	                            if (_this8.state.idElementKeyDownChoice === lengthAllElementButton) {
 	                                _this8.state.idElementKeyDownChoice = 0;
 	                            } else {
-	                                _this8.state.idElementKeyDownChoice++;
+	                                // skip if first is input
+	                                // -1 is default state
+	                                if (_this8.state.idElementKeyDownChoice === -1) {
+	                                    _this8.state.idElementKeyDownChoice = 1;
+	                                } else {
+	                                    _this8.state.idElementKeyDownChoice++;
+	                                }
 	                            }
 	                        } else {
-
+	                            // if key === 38
+	                            // if first => last
 	                            if (_this8.state.idElementKeyDownChoice === 0) {
 	                                _this8.state.idElementKeyDownChoice = lengthAllElementButton;
 	                            } else {
@@ -799,21 +805,15 @@
 	                            idElementKeyDownChoice: _this8.state.idElementKeyDownChoice
 	                        });
 
-	                        console.log(25);
-
-	                        // if there is button 'view all' or div class='media'
-	                        console.log(_this8.state.idElementKeyDownChoice);
-	                        console.log(document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes.length !== 1);
-	                        if (
-	                        /*document.querySelectorAll('.form_block')[this.state.idElementKeyDownChoice] !== undefined ||
-	                        document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[1]
-	                        ||
-	                        document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'*/
-	                        document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes.length !== 1 || document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
+	                        // if there not is button 'view all' or div class='media'
+	                        // if childNodes.length === 1 this element not have button 'View All'
+	                        // childNodes.length === 0 this is input
+	                        // childNodes.length === 4 this element have button 'View All'
+	                        if (document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes.length !== 1 || document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
 	                            // add id element li
 	                            document.querySelectorAll('.category .list-group-item, .form_block')[_this8.state.idElementKeyDownChoice].id = 'active-item';
-	                            // this document.querySelectorAll('')[0] find button
 
+	                            // this document.querySelectorAll('')[0] find button
 	                            document.querySelectorAll('#active-item .btn, #active-item .media-heading, #active-item input')[0].id = 'active-button';
 	                        } else {
 	                            moveUpOrDown(key);
