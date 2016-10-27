@@ -962,9 +962,10 @@ class App extends React.Component {
 // if childNodes.length === 1 this element not have button 'View All'
 // childNodes.length === 0 this is input
 // childNodes.length === 4 this element have button 'View All'
-                if (document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes.length !== 1 ||
-                    document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'
-                ) {
+                if (document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice]
+                        .childNodes.length !== 1 ||
+                    document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice]
+                        .childNodes[0].className === 'media') {
 // add id element li
                     document.querySelectorAll('.category .list-group-item, .form_block')[this.state.idElementKeyDownChoice].id = 'active-item';
 
@@ -1032,9 +1033,7 @@ class App extends React.Component {
 
 
                 </div>
-                <div id="lorem">
 
-                </div>
             </div>
         );
     }

@@ -5,6 +5,9 @@ body, html{
 #root{
     margin-top: 2em;
 }
+#root .container{
+    z-index: 9999;
+}
 #root .row{
     position: relative;
 }

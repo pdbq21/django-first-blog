@@ -868,8 +868,7 @@
 	                        )
 	                    ),
 	                    HTML_SearchResultView
-	                ),
-	                _react2.default.createElement('div', { id: 'lorem' })
+	                )
 	            );
 	        }
 	    }]);
