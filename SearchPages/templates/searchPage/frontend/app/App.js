@@ -539,7 +539,7 @@ class ListArticlesItem extends React.Component {
                         </a>
                     </div>
                     <div className="media-body">
-                        <h4 className="media-heading" id="">{this.props.dataListArticles.Title}</h4>
+                        <a href="" className="media-heading" id=""><h4>{this.props.dataListArticles.Title}</h4></a>
                         {/* max lenght string 100 char */}
                         {this.props.dataListArticles.Body.substring(0, 100) + '...'}
                     </div>
@@ -568,7 +568,9 @@ class SearchResultCategoryRight extends React.Component {
         return (
             <div id="category_right" className="col-sm-6 col-md-6 col-lg-6  ">
                 <div className="category_name list-group">
-                    <p className="list-group-item"><span>Articles (Found {this.props.dataArticles.length} items) </span>
+                    <p className="list-group-item">
+                        <span >
+                        Articles (Found {this.props.dataArticles.length} items) </span>
                         {/* if items size is not > 5 button hide */}
                         {(this.props.dataArticles.length > 5) ?
                             <button type="button" className="btn btn-default" id="">View All</button> : null}
@@ -624,7 +626,8 @@ class SearchResultCategoryLeft extends React.Component {
 
             HTML_Div_Category_Name.push(<div className="category_name list-group">
                 <p className="list-group-item">
-                            <span>
+                            <span className={(this.props.dataCategory[
+                        Object.keys(this.props.dataCategory)[iterator]].length > 5) ? 'showButton' : 'hideButton'}>
                                 {Object.keys(this.props.dataCategory)[iterator]} (
                                 Found {this.props.dataCategory[
                                 Object.keys(this.props.dataCategory)[iterator]].length} items)
@@ -696,19 +699,19 @@ class App extends React.Component {
             },
             textInput: '',
 
-            idElementKeyDownChoice: -1
+            idElementKeyDownChoice: -1//-1
 
         }
     }
 
-    lenghtTextInput(){
+    lenghtTextInput() {
         // this function to verify length textInput
 // min 3 chars
         return (this.state.textInput.length > 2);
     }
 
     hideElement(event) {
-        if (!event.target.matches('#category, #category *') && !event.target.matches('#search-text')) {
+        if (!event.target.matches('#category, #category *') && !event.target.matches('input[name="search-text"]')) {
 
             document.getElementById('category').style.display = 'none';
         }
@@ -729,7 +732,6 @@ class App extends React.Component {
         document.addEventListener("keydown", this.handleKeyDownEsc, false);
     }
 
-
     componentDidUpdate() {
 
         if (document.getElementById("category")) {
@@ -744,10 +746,8 @@ class App extends React.Component {
 
     handelClickButtonSearch() {
 // empty
-        //let textInput = document.getElementById('search-text').value;
 
     }
-
 
     handleChangeInput(event) {
 
@@ -908,19 +908,21 @@ class App extends React.Component {
         else {
 
             const moveUpOrDown = (key) => {
-
+                console.log('enter');
                 // all items
-                let lengthAllElementButton = document.querySelectorAll('.category .list-group-item').length - 1;
+                console.log(document.querySelectorAll('.category .list-group-item, .form_block input'));
+                let lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length-1;// - 1;
 
                 // this 5 is lenght category without items
-                if (lengthAllElementButton < 5 ) return;
+                if (lengthAllElementButton < 5) return;
 
 // idElementKeyDownChoice = -1  is default value
-                if (this.state.idElementKeyDownChoice !== -1) {
+                if (this.state.idElementKeyDownChoice !== -1/*-1*/) {
 // delete id old choice
 
                     // delete li id active *
-                    document.querySelectorAll('.category .list-group-item')[this.state.idElementKeyDownChoice].id = '';
+                    console.log(this.state.idElementKeyDownChoice);
+                    document.querySelectorAll('.category .list-group-item, .form_block')[this.state.idElementKeyDownChoice].id = '';
                     // delete button / h4 id active *
                     if (document.getElementById('active-button')) {
                         document.getElementById('active-button').id = '';
@@ -928,6 +930,7 @@ class App extends React.Component {
                 }
 
                 if (key === 40) {
+
 
                     if (this.state.idElementKeyDownChoice === lengthAllElementButton) {
                         this.state.idElementKeyDownChoice = 0;
@@ -948,13 +951,25 @@ class App extends React.Component {
                 this.setState({
                     idElementKeyDownChoice: this.state.idElementKeyDownChoice
                 });
+
+                console.log(25);
+
 // if there is button 'view all' or div class='media'
-                if (document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes.length > 1 ||
-                    document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
+                console.log(this.state.idElementKeyDownChoice);
+                console.log(document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes.length !== 1);
+                if (
+                    /*document.querySelectorAll('.form_block')[this.state.idElementKeyDownChoice] !== undefined ||
+                    document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[1]
+                    ||
+                    document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'*/
+                document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes.length !== 1
+                || document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'
+                ) {
 // add id element li
-                    document.querySelectorAll('.category .list-group-item')[this.state.idElementKeyDownChoice].id = 'active-item';
+                    document.querySelectorAll('.category .list-group-item, .form_block')[this.state.idElementKeyDownChoice].id = 'active-item';
                     // this document.querySelectorAll('')[0] find button
-                    document.querySelectorAll('#active-item .btn, #active-item .media-heading')[0].id = 'active-button';
+
+                    document.querySelectorAll('#active-item .btn, #active-item .media-heading, #active-item input')[0].id = 'active-button';
                 }
                 else {
                     moveUpOrDown(key);
@@ -968,9 +983,13 @@ class App extends React.Component {
 
                 console.log(document.getElementById('active-button'));
                 document.getElementById('active-button').click();
+
             } else {
                 // key === 40 or 38
                 moveUpOrDown(key);
+
+                document.querySelectorAll('#active-button')[0].focus();
+
             }
 
         }
@@ -990,13 +1009,13 @@ class App extends React.Component {
         return (
             <div className="container">
 
-                <div className="row">
+                <div className="row" onKeyDown={this.handleKeyDown.bind(this)}>
 
                     <div className="col-sm-12 col-md-12 col-lg-12 form_block"
-                         onKeyDown={this.handleKeyDown.bind(this)}
+                         id=""
                     >
 
-                        <input type="text" id="search-text" className="form-control "
+                        <input type="text" name="search-text" id="" className="form-control"
                                onChange={this.handleChangeInput.bind(this)}
 
                         />

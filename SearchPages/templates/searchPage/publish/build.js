@@ -353,9 +353,13 @@
 	                        'div',
 	                        { className: 'media-body' },
 	                        _react2.default.createElement(
-	                            'h4',
-	                            { className: 'media-heading', id: '' },
-	                            this.props.dataListArticles.Title
+	                            'a',
+	                            { href: '', className: 'media-heading', id: '' },
+	                            _react2.default.createElement(
+	                                'h4',
+	                                null,
+	                                this.props.dataListArticles.Title
+	                            )
 	                        ),
 	                        this.props.dataListArticles.Body.substring(0, 100) + '...'
 	                    )
@@ -484,7 +488,7 @@
 	                        { className: 'list-group-item' },
 	                        _react2.default.createElement(
 	                            'span',
-	                            null,
+	                            { className: this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length > 5 ? 'showButton' : 'hideButton' },
 	                            (0, _keys2.default)(this.props.dataCategory)[iterator],
 	                            ' ( Found ',
 	                            this.props.dataCategory[(0, _keys2.default)(this.props.dataCategory)[iterator]].length,
@@ -563,7 +567,7 @@
 	            },
 	            textInput: '',
 
-	            idElementKeyDownChoice: -1
+	            idElementKeyDownChoice: -1 //-1
 
 	        };
 	        return _this6;
@@ -579,7 +583,7 @@
 	    }, {
 	        key: 'hideElement',
 	        value: function hideElement(event) {
-	            if (!event.target.matches('#category, #category *') && !event.target.matches('#search-text')) {
+	            if (!event.target.matches('#category, #category *') && !event.target.matches('input[name="search-text"]')) {
 
 	                document.getElementById('category').style.display = 'none';
 	            }
@@ -616,7 +620,6 @@
 	        key: 'handelClickButtonSearch',
 	        value: function handelClickButtonSearch() {
 	            // empty
-	            //let textInput = document.getElementById('search-text').value;
 
 	        }
 	    }, {
@@ -756,24 +759,26 @@
 	                (function () {
 
 	                    var moveUpOrDown = function moveUpOrDown(key) {
-
+	                        console.log('enter');
 	                        // all items
-	                        var lengthAllElementButton = document.querySelectorAll('.category .list-group-item').length - 1;
+	                        console.log(document.querySelectorAll('.category .list-group-item, .form_block input'));
+	                        var lengthAllElementButton = document.querySelectorAll('.category .list-group-item, .form_block input').length - 1; // - 1;
 
 	                        // this 5 is lenght category without items
 	                        if (lengthAllElementButton < 5) return;
 
 	                        // idElementKeyDownChoice = -1  is default value
-	                        if (_this8.state.idElementKeyDownChoice !== -1) {
-	                            // delete id old choice
+	                        if (_this8.state.idElementKeyDownChoice !== -1 /*-1*/) {
+	                                // delete id old choice
 
-	                            // delete li id active *
-	                            document.querySelectorAll('.category .list-group-item')[_this8.state.idElementKeyDownChoice].id = '';
-	                            // delete button / h4 id active *
-	                            if (document.getElementById('active-button')) {
-	                                document.getElementById('active-button').id = '';
+	                                // delete li id active *
+	                                console.log(_this8.state.idElementKeyDownChoice);
+	                                document.querySelectorAll('.category .list-group-item, .form_block')[_this8.state.idElementKeyDownChoice].id = '';
+	                                // delete button / h4 id active *
+	                                if (document.getElementById('active-button')) {
+	                                    document.getElementById('active-button').id = '';
+	                                }
 	                            }
-	                        }
 
 	                        if (key === 40) {
 
@@ -794,12 +799,23 @@
 	                        _this8.setState({
 	                            idElementKeyDownChoice: _this8.state.idElementKeyDownChoice
 	                        });
+
+	                        console.log(25);
+
 	                        // if there is button 'view all' or div class='media'
-	                        if (document.querySelectorAll('.category .list-group-item ')[_this8.state.idElementKeyDownChoice].childNodes.length > 1 || document.querySelectorAll('.category .list-group-item ')[_this8.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
+	                        console.log(_this8.state.idElementKeyDownChoice);
+	                        console.log(document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes.length !== 1);
+	                        if (
+	                        /*document.querySelectorAll('.form_block')[this.state.idElementKeyDownChoice] !== undefined ||
+	                        document.querySelectorAll('.category .list-group-item, .form_block input')[this.state.idElementKeyDownChoice].childNodes[1]
+	                        ||
+	                        document.querySelectorAll('.category .list-group-item ')[this.state.idElementKeyDownChoice].childNodes[0].className === 'media'*/
+	                        document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes.length !== 1 || document.querySelectorAll('.category .list-group-item, .form_block input')[_this8.state.idElementKeyDownChoice].childNodes[0].className === 'media') {
 	                            // add id element li
-	                            document.querySelectorAll('.category .list-group-item')[_this8.state.idElementKeyDownChoice].id = 'active-item';
+	                            document.querySelectorAll('.category .list-group-item, .form_block')[_this8.state.idElementKeyDownChoice].id = 'active-item';
 	                            // this document.querySelectorAll('')[0] find button
-	                            document.querySelectorAll('#active-item .btn, #active-item .media-heading')[0].id = 'active-button';
+
+	                            document.querySelectorAll('#active-item .btn, #active-item .media-heading, #active-item input')[0].id = 'active-button';
 	                        } else {
 	                            moveUpOrDown(key);
 	                        }
@@ -814,6 +830,8 @@
 	                    } else {
 	                        // key === 40 or 38
 	                        moveUpOrDown(key);
+
+	                        document.querySelectorAll('#active-button')[0].focus();
 	                    }
 	                })();
 	            }
@@ -833,13 +851,13 @@
 	                { className: 'container' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'row' },
+	                    { className: 'row', onKeyDown: this.handleKeyDown.bind(this) },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'col-sm-12 col-md-12 col-lg-12 form_block',
-	                            onKeyDown: this.handleKeyDown.bind(this)
+	                            id: ''
 	                        },
-	                        _react2.default.createElement('input', { type: 'text', id: 'search-text', className: 'form-control ',
+	                        _react2.default.createElement('input', { type: 'text', name: 'search-text', id: '', className: 'form-control',
 	                            onChange: this.handleChangeInput.bind(this)
 
 	                        }),

@@ -27,9 +27,7 @@ background-color: white;
     margin-left: 0px;
     width: 100%;
 }
-#search-text{
-    /*empty*/
-}
+
 .category_name{
 background-color: #EEEEEE;
         margin-bottom: 0px;
@@ -122,4 +120,15 @@ border-top-width: 0px;
     float: left;
     padding-bottom: 100%;
     margin-bottom: -100%;
+}
+#active-button{
+
+}
+#active-button:focus{
+    background-color: #563d7c;
+    outline: none;
+}
+
+a:focus{
+    text-decoration: none;
 }
